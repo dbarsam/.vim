@@ -94,7 +94,6 @@ set   undoreload=10000      " maximum number lines to save for undo on a buffer 
 set   updatecount=100       " Number of times to update the swap file
 set   updatetime=4000       " write swap file to disk after 4 inactive seconds
 set   whichwrap=b,s         " Keys that can wrap up/down text
-set   wildmode=full         " wildcard behavior
 set   winheight=1           " minimum size for current window
 set   winminheight=1        " minimum size for non-current window
 set   writebackup           " write backup when saving but clean up afterwards
@@ -134,6 +133,7 @@ set   viminfo+=n$VIMFILES/viminfo.txt
 
 " AutoComplete 
 set   wildmenu
+set   wildmode=full         " How expansion results are presented
 set   wildchar=<Tab>        " Character for wildchar expansion
 set   wildcharm=<Tab>       " Character for wildchar expansion in mappings
 set   wildignore+=*.o,*~,.lo
