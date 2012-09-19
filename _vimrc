@@ -204,6 +204,21 @@ if has("unix")
 endif
 
 " ===================================================================
+" External Config Files
+" ===================================================================
+
+" ============
+" Auxiliary Settings
+" ============
+runtime! settings/**/*.vim
+
+" ============
+" Custom Menus - This will load the first menu.vim file in our rtp, 
+" defaulting to the VIMRUNTIME system menu if none is found.
+" ============
+runtime menu.vim
+
+" ===================================================================
 " Filetype Handling
 " ===================================================================
 filetype plugin indent on
