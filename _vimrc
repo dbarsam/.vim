@@ -204,6 +204,71 @@ if has("unix")
 endif
 
 " ===================================================================
+" Mappings
+" ===================================================================
+
+" ============
+" Terminal Mappings
+" ============
+if has("unix") && !has("gui_running")
+   map [2~   <Home>
+   map [1~   <Insert>
+   map [3~   <PageUp>
+   map [5~   <End>
+   map [6~   <PageDown>
+   map [11~  <F1>
+   map [12~  <F2>
+   map [13~  <F3>
+   map [14~  <F4>
+   map [15~  <F5>
+   map [17~  <F6>
+   map [18~  <F7>
+   map [19~  <F8>
+   map [20~  <F9>
+   map [21~  <F10>
+   map [23~  <F11>
+   map [24~  <F12>
+endif
+
+" ============
+" Map Leader
+" ============
+let mapleader = ";"
+
+" ============
+" Console Specific Menu
+" ============
+map <leader>mm <Plug>CoreShowConsoleMenu
+
+" ============
+" Movement Mappings
+" ============
+" Map classic vi movements to display ASCII value of Current Character
+nmap k <Plug>CoreGoToAsciiUp
+nmap j <Plug>CoreGoToAsciiDown
+nmap l <Plug>CoreGoToAsciiLeft
+nmap h <Plug>CoreGoToAsciiRight
+
+" Include Half-Screen Jumping
+map <S-PageUp>   <Plug>CoreGoToHalfPageUp
+map <S-PageDown> <Plug>CoreGoToHalfPageDown
+
+" ============
+" Quick System Edits Mapped to Keyboard 
+" ============
+" e0     Edit User File Directory
+" e1-9   Edit or View system file
+nmap <leader>e0 <Plug>CoreEditVimFiles
+nmap <leader>e1 <Plug>CoreEditVimrc
+nmap <leader>e2 <Plug>CoreEditGVimrc
+nmap <leader>e3 <Plug>CoreEditMenu
+nmap <leader>e4 <Plug>CoreEditColorscheme
+nmap <leader>e5 <Plug>CoreViewSystemRGB
+nmap <leader>e6 <Plug>CoreViewSystemMSWin
+nmap <leader>e7 <Plug>CoreViewSystemMenu
+nmap <leader>e8 <Plug>CoreViewVimInfo
+
+" ===================================================================
 " External Config Files
 " ===================================================================
 
