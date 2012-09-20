@@ -2,7 +2,7 @@
 "                  Core Autoload Functions for VIM
 " ===================================================================
 " File:           autoload/settings/core.vim
-" Purpose:        Custom core commands the editor Vim (Vi IMproved)
+" Purpose:        Custom core commands for the editor Vim (Vi IMproved)
 " Author:         David Barsam
 " URL:            https://github.com/dbarsam/.vim
 " ===================================================================
