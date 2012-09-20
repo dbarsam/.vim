@@ -241,6 +241,17 @@ let mapleader = ";"
 map <leader>mm <Plug>CoreShowConsoleMenu
 
 " ============
+" Function Key Presets
+" ============
+map <F2>  <Plug>OptionsToggleIndentMode
+map <F3>  <Plug>OptionsToggleSearchHighlighting
+map <F4>  <Plug>OptionsToggleCaseSensitiveSearching
+map <F5>  <Plug>OptionsToggleTextWrap
+map <F6>  <Plug>OptionsToggleListMode
+map <F7>  <Plug>OptionsToggleLineNumber
+map <F8>  <Plug>OptionsToggleExpandTab
+
+" ============
 " Movement Mappings
 " ============
 " Map classic vi movements to display ASCII value of Current Character
@@ -252,6 +263,12 @@ nmap h <Plug>CoreGoToAsciiRight
 " Include Half-Screen Jumping
 map <S-PageUp>   <Plug>CoreGoToHalfPageUp
 map <S-PageDown> <Plug>CoreGoToHalfPageDown
+
+" Arrow Keys remapped for 'wrap' mode
+map <End>  <Plug>OptionsWrapModeEnd
+map <Home> <Plug>OptionsWrapModeHome
+map <Down> <Plug>OptionsWrapModeDown
+map <Up>   <Plug>OptionsWrapModeUp
 
 " ============
 " Quick System Edits Mapped to Keyboard 
