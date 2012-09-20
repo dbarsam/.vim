@@ -268,6 +268,42 @@ nmap <leader>e6 <Plug>CoreViewSystemMSWin
 nmap <leader>e7 <Plug>CoreViewSystemMenu
 nmap <leader>e8 <Plug>CoreViewVimInfo
 
+" ============
+" Buffer Mappings
+" ============
+
+" Buffer Naivations using the Alt/Meta Key
+nmap <M-Left>   <Plug>BufferGoToPrev
+nmap <M-Right>  <Plug>BufferGoToNext
+
+" ============
+" Window Mappings
+" ============
+ 
+" Window Naivation using the Tab/Arrow Keys
+nmap <TAB>      <Plug>WindowGoToNext
+nmap <S-Tab>    <Plug>WindowGoToPrev
+nmap <S-Up>     <Plug>WindowGoToTop
+nmap <S-Down>   <Plug>WindowGoToBottom
+nmap <S-Left>   <Plug>WindowGoToLeft
+nmap <S-Right>  <Plug>WindowGoToRight
+
+" Window Quick Manipulation Maps
+nmap <leader>wn <Plug>WindowNewHorizontal
+nmap <leader>wq <Plug>WindowDelete
+nmap <leader>ws <Plug>WindowSplitHorizontal
+nmap <leader>wv <Plug>WindowSplitVertical
+nmap <leader>wr <Plug>WindowRotateLayout
+nmap <leader>wm <Plug>WindowMaximize
+
+" ============
+" Tab Mappings
+" ============
+
+" Tab Naivation using the Ctrl Key
+nmap <C-TAB>    <Plug>TabGoToNext
+nmap <C-S-TAB>  <Plug>TabGoToPrev
+
 " ===================================================================
 " External Config Files
 " ===================================================================
