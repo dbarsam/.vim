@@ -41,6 +41,11 @@ com! -bar -nargs=0 ShowFileFormatDialog         call settings#options#ShowFileFo
 " ============
 " Plugin Mappings
 " ============
+noremap <expr> <Plug>OptionsWrapModeEnd             (&wrap ? 'g<End>'  : '<End>')
+noremap <expr> <Plug>OptionsWrapModeHome            (&wrap ? 'g<Home>' : '<Home>')
+noremap <expr> <Plug>OptionsWrapModeDown            (&wrap ? 'g<Down>' : '<Down>')
+noremap <expr> <Plug>OptionsWrapModeUp              (&wrap ? 'g<Up>'   : '<Up>')
+
 nnoremap <Plug>OptionsToggleGUIToolbar              :ToggleGUIOption t<CR>
 nnoremap <Plug>OptionsToggleGUIToolbarBottom        :ToggleGUIOption b<CR>
 nnoremap <Plug>OptionsToggleGUIToolbarLeft          :ToggleGUIOption l<CR>
@@ -56,11 +61,6 @@ nnoremap <Plug>OptionsToggleListMode                :ToggleRevealCharacters<CR>
 nnoremap <Plug>OptionsToggleSearchHighlighting      :ToggleSearchHighlighting<CR>
 nnoremap <Plug>OptionsToggleSpellChecking           :ToggleSpellChecking<CR>
 nnoremap <Plug>OptionsToggleTextMargins             :ToggleTextMargins<CR>
-
-nnoremap <expr> <Plug>OptionsWrapModeEnd            (&wrap ? 'g<End>'  : '<End>')
-nnoremap <expr> <Plug>OptionsWrapModeHome           (&wrap ? 'g<Home>' : '<Home>')
-nnoremap <expr> <Plug>OptionsWrapModeDown           (&wrap ? 'g<Down>' : '<Down>')
-nnoremap <expr> <Plug>OptionsWrapModeUp             (&wrap ? 'g<Up>'   : '<Up>')
 
 nnoremap <Plug>ShowTextWidthDialog                  :ShowTextWidthDialog<CR>
 nnoremap <Plug>ShowSearchPathDialog                 :ShowSearchPathDialog<CR>
