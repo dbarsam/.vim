@@ -56,6 +56,23 @@ set   guitablabel+=-\ %t         " show the filename
 set   guitablabel+=\ %M          " show the modification flag
 
 " ===================================================================
+" Mappings
+" ===================================================================
+
+" ============
+" Mouse
+" ============
+
+" Make shift-insert work like in Xterm
+map  <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+
+" Mousemodel is set to "popup" (above in the gui settings) but force the
+" Shift-Click behaviour of "extend" (in normal mode)
+nmap <S-LeftMouse>  <LeftMouse>*
+nmap <S-RightMouse> <LeftMouse>#
+
+" ===================================================================
 " External Config Files
 " ===================================================================
 
