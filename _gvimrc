@@ -23,7 +23,6 @@ set   winaltkeys=menu            " how to handle the alt + key mappings
 
 " Gui Window Appearance
 set   guioptions=
-set   guioptions+=a              " enable auto-select
 set   guioptions+=g              " grey out menu items
 set   guioptions+=r              " show the right scroll bar
 set   guioptions+=m              " show the menu bar
