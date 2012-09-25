@@ -286,6 +286,13 @@ nmap <leader>e7 <Plug>CoreViewSystemMenu
 nmap <leader>e8 <Plug>CoreViewVimInfo
 
 " ============
+" Serching Mappings
+" ============
+vmap <silent> * <Plug>VisualSearchForward
+vmap <silent> # <Plug>VisualSearchReverse
+vmap <silent> ? <Plug>VisualSearchGrep
+
+" ============
 " Buffer Mappings
 " ============
 
@@ -320,6 +327,12 @@ nmap <leader>wm <Plug>WindowMaximize
 " Tab Naivation using the Ctrl Key
 nmap <C-TAB>    <Plug>TabGoToNext
 nmap <C-S-TAB>  <Plug>TabGoToPrev
+
+" ============
+" Indenting Mappings
+" ============
+vmap <TAB>      <Plug>TextMoveLineRight
+vmap <S-TAB>    <Plug>TextMoveLineLeft
 
 " ===================================================================
 " External Config Files
