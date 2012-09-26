@@ -21,8 +21,14 @@ set nomousefocus                 " automate selection of windows with the mouse 
 set   mousehide                  " hide the mouse when typing
 set   winaltkeys=menu            " how to handle the alt + key mappings
 
+" Gui Clipbaord
+set   clipboard=
+set   clipboard+=unnamed         " Use "* register for unnamed clipboard operation
+
 " Gui Window Appearance
 set   guioptions=
+set   guioptions+=A              " autoselect *only* during the modeless selection
+set   guioptions+=P              " autoselect only to the @+ register instead of @*
 set   guioptions+=g              " grey out menu items
 set   guioptions+=r              " show the right scroll bar
 set   guioptions+=m              " show the menu bar
