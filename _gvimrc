@@ -65,6 +65,11 @@ set   guitablabel+=\ %M          " show the modification flag
 " ===================================================================
 
 " ============
+" Clipboard
+" ============
+vmap <C-C> <Plug>TextCopy
+
+" ============
 " Mouse
 " ============
 
