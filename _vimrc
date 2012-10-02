@@ -313,12 +313,14 @@ nmap <S-Left>   <Plug>WindowGoToLeft
 nmap <S-Right>  <Plug>WindowGoToRight
 
 " Window Quick Manipulation Maps
-nmap <leader>wn <Plug>WindowNewHorizontal
 nmap <leader>wq <Plug>WindowDelete
 nmap <leader>ws <Plug>WindowSplitHorizontal
+nmap <leader>wS <Plug>WindowNewHorizontal
 nmap <leader>wv <Plug>WindowSplitVertical
+nmap <leader>wV <Plug>WindowNewVertical
 nmap <leader>wr <Plug>WindowRotateLayout
 nmap <leader>wm <Plug>WindowMaximize
+nmap <leader>wM <Plug>WindowMinimize
 
 " ============
 " Tab Mappings

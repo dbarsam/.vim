@@ -137,9 +137,10 @@ nnoremap <Plug>WindowMinHeight          <C-W>1_
 nnoremap <Plug>WindowMaxWidth           <C-W><BAR>
 nnoremap <Plug>WindowMinWidth           <C-W>1<BAR>
 nnoremap <Plug>WindowMaximize           <C-W>_<C-W><BAR>
+nnoremap <Plug>WindowMinimize           <C-W>1_<C-W>1<BAR>
 
-nnoremap <Plug>WindowNewHorizontal      <C-W>n
-nnoremap <Plug>WindowNewVertical        <C-W>v
+nnoremap <Plug>WindowNewHorizontal      :WinNewHorizontal<CR>
+nnoremap <Plug>WindowNewVertical        :WinNewVertical<CR>
 nnoremap <Plug>WindowDelete             <C-W>q
 nnoremap <Plug>WindowClose              <C-W>c
 nnoremap <Plug>WindowSafeClose          :WinClose<CR>
