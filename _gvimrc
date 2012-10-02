@@ -82,6 +82,24 @@ map! <S-Insert> <MiddleMouse>
 nmap <S-LeftMouse>  <LeftMouse>*
 nmap <S-RightMouse> <LeftMouse>#
 
+" ============
+" Fonts 
+" ============
+
+" F0 Font Selector
+nmap <leader>f0  <Plug>FontReset
+
+" F1-9  Font Selector & Presets
+nmap <leader>f1  <Plug>FontPresetTerminal
+nmap <leader>f2  <Plug>FontPresetLucida
+nmap <leader>f3  <Plug>FontPresetConsolas
+
+" Font Size through the up/down arrows
+map <C-Up>       <Plug>FontSizeIncrement
+map <C-S-Up>     <Plug>FontSizeIncrease
+map <C-Down>     <Plug>FontSizeDecrement
+map <C-S-Down>   <Plug>FontSizeDecrease
+"
 " ===================================================================
 " External Config Files
 " ===================================================================
