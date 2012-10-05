@@ -250,6 +250,7 @@ map <F5>  <Plug>OptionsToggleTextWrap
 map <F6>  <Plug>OptionsToggleListMode
 map <F7>  <Plug>OptionsToggleLineNumber
 map <F8>  <Plug>OptionsToggleExpandTab
+map <F9>  <Plug>SyntaxToggleColorPreset
 
 " ============
 " Movement Mappings
@@ -357,6 +358,14 @@ runtime menu.vim
 
 if exists(':BundleManagerInit')
     BundleManagerInit
+endif
+
+" ===================================================================
+" Syntax Highlighting
+" ===================================================================
+
+if exists(":SyntaxInit")
+    SyntaxInit rusty
 endif
 
 " ===================================================================
