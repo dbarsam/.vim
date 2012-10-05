@@ -1,5 +1,5 @@
 " ===================================================================
-"     ViM StatusLine, Title, and Ruler Autoload Function for VIM
+"         ViM StatusLine, Title, and Ruler Commands for VIM
 " ===================================================================
 " File:           settings/statusline.vim
 " Purpose:        Vim statusline commands for the editor Vim (Vi IMproved)
