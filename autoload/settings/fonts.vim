@@ -48,6 +48,17 @@ func! settings#fonts#FontPreset(name, ...) abort
 endfunc
 
 " ============
+" Set the Size of the Font via UI Prompt
+" ============
+func! settings#fonts#FontSetSizePrompt() abort
+    let cursize = matchstr(&guifont, '\(\:h\)\@<=[0-9.]\+')
+    let newsize = str2nr( inputdialog("Enter in a font size...", l:cursize != "" ? l:cursize : "") )
+    if l:newsize != 0
+        call settings#fonts#FontSetSize(str2nr(l:newsize))
+    endif
+endfun
+
+" ============
 " Set the Size of the Font
 " ============
 func! settings#fonts#FontSetSize(value) abort

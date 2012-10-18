@@ -34,6 +34,7 @@ command! -nargs=+ FontRegister         call settings#fonts#FontPreset(<f-args>)
 command! -nargs=+ FontPreset           call settings#fonts#FontPreset(<f-args>)
 command! -nargs=0 FontReset            call settings#fonts#FontReset()
 command! -nargs=1 FontSetSize          call settings#fonts#FontSetSize(<f-args>)
+command! -nargs=0 FontSetSizePrompt    call settings#fonts#FontSetSizePrompt()
 command! -nargs=1 FontAdjustSize       call settings#fonts#FontAdjustSize(<f-args>)
 command! -nargs=1 FontToggleAttribute  call settings#fonts#FontToggleAttribute(<f-args>)
 command! -bar -nargs=0 SelectFont      set guifont=*
@@ -57,6 +58,7 @@ nnoremap <Plug>FontToggleUnderline  :FontToggleAttribute u<CR>
 nnoremap <Plug>FontToggleStrikeout  :FontToggleAttribute s<CR>
 
 " Font Size Manipulation
+nnoremap <Plug>FontSizePrompt       :FontSetSizePrompt<CR>
 nnoremap <Plug>FontSizeIncrement    :FontAdjustSize   1<CR>
 nnoremap <Plug>FontSizeDecrement    :FontAdjustSize  -1<CR>
 nnoremap <Plug>FontSizeIncrease     :FontAdjustSize  10<CR>
