@@ -51,7 +51,7 @@ com! -bar -nargs=+ GenerateSymLink              call settings#system#settings#sy
 
 "  File Commands
 com! -nargs=0 FileNew                           confirm enew
-com! -nargs=0 FileSplitOpen                     confirm sp
+com! -nargs=0 FileSplitOpen                     browse confirm sp
 com! -nargs=0 FileOpen                          browse confirm e
 com! -nargs=0 FileClose                         call settings#system#CloseBuffer()
 com! -nargs=0 FileSave                          call settings#system#SaveBuffer()
