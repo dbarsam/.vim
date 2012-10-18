@@ -23,8 +23,10 @@ set cpo&vim
 com! -bar -nargs=? ToggleFolding             call settings#folding#ToggleFolding(<f-args>)
 
 com! -bar -nargs=1 FoldingMethod             set fdm=<args>
+com! -bar -nargs=0 FoldingMethodPrompt       call settings#folding#SetFoldingMethodPrompt()
 com! -bar -nargs=1 FoldingColumnWidth        call settings#folding#SetColumnFoldingSize(<f-args>)
 com! -bar -nargs=1 FoldingColumnWidthAdjust  call settings#folding#AdjustFoldingColumnSize(<f-args>)
+com! -bar -nargs=0 FoldingColumnWidthPrompt  call settings#folding#SetColumnFoldingSizePrompt()
 
 " ============
 " Plugin Mapping
@@ -48,12 +50,10 @@ nnoremap <Plug>FoldingDelete            zd
 nnoremap <Plug>FoldingDeleteAll         zD
 
 " Folding Method
-nnoremap <Plug>FoldingMethodManual      :FoldingMethod manual<CR>
-nnoremap <Plug>FoldingMethodIndent      :FoldingMethod indent<CR>
-nnoremap <Plug>FoldingMethodExpression  :FoldingMethod expr<CR>
-nnoremap <Plug>FoldingMethodSyntax      :FoldingMethod syntax<CR>
-nnoremap <Plug>FoldingMethodDiff        :FoldingMethod diff<CR>
-nnoremap <Plug>FoldingMethodMarker      :FoldingMethod marker<CR>
+nnoremap <Plug>FoldingMethodPrompt      :FoldingMethodPrompt<CR>
+
+" Folding Column
+nnoremap <Plug>FoldingColumnWidthPrompt :FoldingColumnWidthPrompt<CR>
 
 " ============
 " Restore Compatibility Options

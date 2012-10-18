@@ -15,6 +15,16 @@ func! settings#folding#AdjustFoldingColumnSize(increment) abort
 endfunc
 
 " ============
+" Set the Size of the Folding Column via Prompt
+" ============
+func! settings#folding#SetColumnFoldingSizePrompt() abort
+    let newsize = str2nr(inputdialog("Enter a Folding Column Size...", &fdc))
+    if l:newsize != 0
+        call settings#folding#SetColumnFoldingSize(newsize)
+    endif
+endfun
+
+" ============
 " Set the Size of the Folding Column
 " ============
 func! settings#folding#SetColumnFoldingSize(value) abort
@@ -22,6 +32,32 @@ func! settings#folding#SetColumnFoldingSize(value) abort
    redraw
    echomsg "Current Folding Column: ". &fdc
 endfunc
+
+" ============
+" Set the Folding Method
+" ============
+function! settings#folding#SetFoldingMethod(name) abort
+   set fdm = a:name
+   redraw
+   echomsg "Current Folding Method ". &fdm
+endfunc
+
+" ============
+" Set the Folding Method via Prompt
+" ============
+function! settings#folding#SetFoldingMethodPrompt() abort
+    let list = ['Select a Folding Method',
+                \ '1. Manual',
+                \ '2. Indent',
+                \ '3. Expr',
+                \ '4. Syntax',
+                \ '5. Diff',
+                \ '6. Marker']
+    let choice = inputlist(l:list)
+    if choice != 0
+        call settings#folding#SetFoldingMethod(strpart(tolower(l:list[l:choice]), 3))
+    endif
+endfunction
 
 " ============
 " Toggle Folding in the Buffer
