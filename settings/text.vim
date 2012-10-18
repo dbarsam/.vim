@@ -93,7 +93,9 @@ nnoremap <Plug>TextPutAfter         ]p
 inoremap <Plug>TextPutAfter         <C-O>[p
 
 nnoremap <Plug>TextDelete           x
+vnoremap <Plug>TextDelete           x
 nnoremap <Plug>TextErase            d
+vnoremap <Plug>TextErase            d
 
 " Sorting
 noremap <Plug>Sort                  :Sort<CR>
