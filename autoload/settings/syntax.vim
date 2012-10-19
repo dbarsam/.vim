@@ -74,6 +74,30 @@ function! settings#syntax#ColorList(path)
 endfunction
 
 " ============
+" Toggle Syntax Highlighting via Prompt
+" ============
+function! settings#syntax#SetSyntaxModePrompt() abort
+    let list = ['Select a Syntax Mode...', 
+                \ '1. On (Manual)',
+                \ '2. On (Automatic)',
+                \ '3. Off',
+                \ '4. Clear',
+                \ '5. On  (Local to File)',
+                \ '6. Off (Local to File)']
+    let choice = inputlist(l:list)
+    if choice != 0
+        call settings#syntax#SetSyntaxMode(settings#syntax#SetSyntaxModeArgs(0,0,0)[l:choice])
+    endif
+endfunction
+
+" ============
+" Visual Diff Argument Complete Function
+" ============
+function! settings#syntax#SetSyntaxModeArgs(ArgLead,CmdLine,CusrorPos) abort
+    return ["manual", "automatic", "off", "clear", "enable", "disable"]
+endfunction
+
+" ============
 " Toggle Syntax Highlighting
 " ============
 function! settings#syntax#SetSyntaxMode(type) abort
@@ -85,19 +109,23 @@ function! settings#syntax#SetSyntaxMode(type) abort
         syntax on
         redraw
         echomsg "Syntax Highlighting: On (Automatic)"
+    elseif a:type == 'clear'
+        syntax clear
+        redraw
+        echomsg "Syntax Highlighting: Cleared Highlighting Info"
     elseif a:type == 'off'
         syntax off
         redraw
         echomsg "Syntax Highlighting: Off"
     elseif a:type == 'disable'
-        syntax clear
+        set syntax=OFF
         redraw
         echomsg "Syntax Highlighting: Disabled in Buffer"
     elseif a:type == 'enable'
         if !exists("g:syntax_on")
             syntax manual
         endif
-        set syn=ON
+        set syntax=ON
         redraw
         echomsg "Syntax Highlighting: Enabled in Buffer"
     endif

@@ -107,6 +107,8 @@ endf
 " ============
 " Plugin Commands
 " ============
+com! -bar -nargs=1 -complete=customlist,settings#syntax#SetSyntaxModeArgs SetSyntaxMode   call settings#syntax#SetSyntaxMode(<f-args>)
+
 com! -bar -nargs=1 SyntaxInit                                   call EnableColorScheme(<f-args>, 0)
 com! -bar -nargs=1 EnableColorScheme                            call EnableColorScheme(<f-args>, 1)
 
@@ -124,6 +126,10 @@ com! -bar -nargs=0 SyntaxHighlightLineLength                    call settings#sy
 com! -bar -nargs=0 SyntaxHighlightLineLengthRefresh             call settings#syntax#ColorLineLengthHighlight(1)
 
 com! -bar -nargs=1 SyntaxHighlightWhiteSpace                    call settings#syntax#ColorWhiteSpaceHighlight(<f-args>)
+
+com!      -nargs=0 SyntaxColorTest                              sp $VIMRUNTIME/syntax/colortest.vim<Bar>so %
+com!      -nargs=0 SyntaxHighlightTest                          runtime syntax/hitest.vim
+com!      -nargs=0 SyntaxConvertToHTML                          runtime syntax/2html.vim
 
 " ============
 " Plugin Mappings
