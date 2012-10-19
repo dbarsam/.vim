@@ -58,12 +58,12 @@ endif
 com!        -nargs=0 DiffModeToggle  call settings#diff#EnableDiffModeSettings(&diff)
 
 " Diff against last saved version
-com!        -nargs=0 DiffLocalChange call settings#diff#DiffLocalChange()
+com!        -nargs=0 DiffUnsavedChanges call settings#diff#DiffUnsavedChanges()
 
 " Diff commands
 com!        -nargs=0 DiffUpdate      diffupdate
-com!        -nargs=0 DiffGet         diffget
-com!        -nargs=0 DiffPut         diffput
+com! -range -nargs=0 DiffGet         <line1>,<line2>diffget
+com! -range -nargs=0 DiffPut         <line1>,<line2>diffput
 com!        -nargs=0 DiffSplit       browse vert diffsplit
 com!        -nargs=0 DiffPatch       browse vert diffpatch
 
@@ -81,9 +81,11 @@ nnoremap <Plug>DiffPrev     [czz
 nnoremap <Plug>DiffNext     ]czz
 
 " Split Window Commands
-nnoremap <Plug>DiffUpdate   :DiffUpdate<CR>
-nnoremap <Plug>DiffPut      :DiffPut<CR>
-nnoremap <Plug>DiffGet      :DiffGet<CR>
+nnoremap <Plug>DiffUpdate   :diffupdate<CR>
+nnoremap <Plug>DiffPut      :diffput<CR>
+vnoremap <Plug>DiffPut      :diffput<CR>
+nnoremap <Plug>DiffGet      :diffget<CR>
+vnoremap <Plug>DiffGet      :diffget<CR>
 nnoremap <Plug>DiffSplit    :DiffSplit<CR>
 nnoremap <Plug>DiffPatch    :DiffPatch<CR>
 
@@ -92,6 +94,9 @@ nnoremap <Plug>DiffVisualDiffClear    :VisualDiff clear<CR>
 nnoremap <Plug>DiffVisualDiffQuery    :VisualDiff query<CR>
 vnoremap <Plug>DiffVisualDiffCompare  :VisualDiff compare<CR>
 vnoremap <Plug>DiffVisualDiffQueue    :VisualDiff queue<CR>
+
+" Diff Unsaved Changes
+nnoremap <Plug>DiffUnsavedChanges     :DiffUnsavedChanges<CR>
 
 " ============
 " Auto Commands for AutoUpdate

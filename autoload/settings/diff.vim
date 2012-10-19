@@ -163,7 +163,7 @@ endfunction
 " Compare current buffer with last saved version.
 " Based On: http://vim.wikia.com/wiki/Diff_current_buffer_and_the_original_file
 " ============" 
-func! settings#diff#DiffLocalChange() 
+func! settings#diff#DiffUnsavedChanges() 
     let bufnum = bufnr('%')
     let filetype = &ft 
     tabnew
