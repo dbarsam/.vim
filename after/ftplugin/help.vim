@@ -29,8 +29,8 @@ nnoremap <buffer> <Space>   <PageDown>
 nnoremap <buffer> <S-Space> <PageUp>
 
 " Jump to Next/Prev |label| using <Tab>/<S-Tab>
-nnoremap <buffer> <Tab>   /<Bar>\zs\k*\ze<Bar><CR>
-nnoremap <buffer> <S-Tab> ?<Bar>\zs\k*\ze<Bar><CR>
+nnoremap <silent> <buffer> <Tab>   /<Bar>\zs\k*\ze<Bar><CR>
+nnoremap <silent> <buffer> <S-Tab> ?<Bar>\zs\k*\ze<Bar><CR>
 
 " Browse just with <CR>/<BS>
 nmap <buffer> <CR>  <Plug>TagJump
