@@ -94,7 +94,7 @@ endfunction
 " Visual Diff Argument Complete Function
 " ============
 function! settings#syntax#SetSyntaxModeArgs(ArgLead,CmdLine,CusrorPos) abort
-    return ["manual", "automatic", "off", "clear", "enable", "disable"]
+    return ["manual", "automatic", "on", "off", "clear", "on-file", "off-file"]
 endfunction
 
 " ============
@@ -108,26 +108,30 @@ function! settings#syntax#SetSyntaxMode(type) abort
     elseif a:type == 'automatic'
         syntax on
         redraw
-        echomsg "Syntax Highlighting: On (Automatic)"
+        echomsg "Syntax Highlighting: On (Automatic)"        
     elseif a:type == 'clear'
         syntax clear
         redraw
         echomsg "Syntax Highlighting: Cleared Highlighting Info"
+    elseif a:type == 'on'
+        syntax enable
+        redraw
+        echomsg "Syntax Highlighting: On"
     elseif a:type == 'off'
         syntax off
         redraw
         echomsg "Syntax Highlighting: Off"
-    elseif a:type == 'disable'
+    elseif a:type == 'off-file'
         set syntax=OFF
         redraw
-        echomsg "Syntax Highlighting: Disabled in Buffer"
-    elseif a:type == 'enable'
+        echomsg "Syntax Highlighting: Disabled in Current File"
+    elseif a:type == 'on-file'
         if !exists("g:syntax_on")
             syntax manual
         endif
         set syntax=ON
         redraw
-        echomsg "Syntax Highlighting: Enabled in Buffer"
+        echomsg "Syntax Highlighting: Enabled in Current File"
     endif
 endfunction
 
