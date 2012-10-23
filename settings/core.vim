@@ -32,6 +32,11 @@ com! -bar -nargs=0 ShowCommandHistory       call feedkeys('q:', 'n')
 com! -bar -nargs=0 RebuildVimHelp           helptags $VIMRUNTIME/doc
 com! -bar -nargs=0 RebuildVimFileslHelp     helptags $VIMFILES/doc
 
+" Vim Sessions
+com! -bar -nargs=0 LoadVimSession           call settings#core#LoadVimSession()
+com! -bar -nargs=0 SaveVimSession           call settings#core#SaveVimSession()
+com! -bar -nargs=0 ViewVimSession           call settings#core#ViewVimSession()
+
 " Quick-Edit commands
 com! -bar -nargs=0 ViewSystemRGB            confirm view $VIMRUNTIME/rgb.txt
 com! -bar -nargs=0 ViewSystemMSWin          confirm view $VIMRUNTIME/mswin.vim

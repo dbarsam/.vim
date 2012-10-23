@@ -23,6 +23,41 @@ function! settings#core#StartupProfile() abort
 endfunction
 
 " ============
+" Select a session to load
+" Default to current session name if present
+" ============
+function! settings#core#LoadVimSession()
+    if strlen(v:this_session) > 0
+        let name = fnameescape(v:this_session)
+    else
+        let name = "Session.vim"
+    endif
+    execute "browse so " . name
+endfunction
+
+" ============
+" Select a session to save
+" Default to current session name if present
+" ============
+function! settings#core#SaveVimSession()
+    if strlen(v:this_session) == 0
+        let v:this_session = "Session.vim"
+    endif
+    execute "browse mksession! " . fnameescape(v:this_session)
+endfunction
+
+" ============
+" Select a session to view
+" Default to current session name if present
+" ============
+function! settings#core#ViewVimSession()
+    if strlen(v:this_session) == 0
+        let v:this_session = "Session.vim"
+    endif
+    execute "confirm browse view " . fnameescape(v:this_session)
+endfunction
+
+" ============
 " Edits the Current Colorscheme file
 " ============
 function! settings#core#EditColorscheme() abort
