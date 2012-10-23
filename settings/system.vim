@@ -37,7 +37,7 @@ elseif (has("win32") || has("dos32")) && !executable("xxd")
 else
     com! -nargs=? XXD                           %!xxd <args>
 endif
-com! -nargs=? ConvertToBinary                   call settings#system#ToggleBindaryMode(<f-args>)
+com! -bar -nargs=? ToggleHexMode                call settings#system#ToggleHexMode(<f-args>)
 
 " Path Text Manipulation
 com! -nargs=0 OpenFilePathFromClipboard         call settings#system#OpenFilePathFromClipboard()

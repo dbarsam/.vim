@@ -304,9 +304,9 @@ function! settings#system#CycleFiles(files, flag) abort
 endfunction
 
 " ============
-" Toggle Binary Mode (HEX)
+" Toggle 'Hex Mode' via xxd
 " ============
-function! settings#system#ToggleBindaryMode(...)
+function! settings#system#ToggleHexMode(...)
     if exists(":XXD")
         let mod = &mod
         if (a:0 == 0)
@@ -316,11 +316,13 @@ function! settings#system#ToggleBindaryMode(...)
         endif
 
         if (l:enable)
+            echomsg "Filtering through xxd..."
             XXD
             if getline(1) =~ "^0000000:"		" only if it worked
                 set ft=xxd
             endif
         elseif &ft == 'xxd'
+            echomsg "Filtering through xxd (reverse)..."
             XXD -r
             set ft=
             doautocmd filetypedetect BufReadPost
