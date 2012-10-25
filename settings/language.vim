@@ -23,11 +23,6 @@ set cpo&vim
 let g:LanguageList = 
             \ {
             \ "Default"         : "en",
-            \ "English (Aus)"   : "en_au",
-            \ "English (Cdn)"   : "en_ca",
-            \ "English (GB)"    : "en_gb",
-            \ "English (NZ)"    : "en_nz",
-            \ "English (US)"    : "en_us",
             \ "French"          : "fr_fr",
             \ "Chinese"         : "zh_tw",
             \ "Korean"          : "ko",
@@ -51,6 +46,7 @@ let g:LanguageFont =
 command! -bar -nargs=0 LanguageReset       call settings#language#LanguageReset()
 command! -bar -nargs=1 LanguageSetMode     call settings#language#SetLanguageMode(<f-args>)
 command! -bar -nargs=1 KeyMap              call settings#language#SetKeyMap(<f-args>)
+command! -bar -nargs=1 SpellingDictionary  call settings#language#SetSpellingDictionary(<f-args>)
 
 " ============
 " Plugin Mapping

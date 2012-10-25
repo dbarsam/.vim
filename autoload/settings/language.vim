@@ -77,11 +77,20 @@ function! settings#language#SetKeyMap(keymap) abort
 endfunction
 
 " ============
-" Spelling Dictionaries
+" Generate the List of Spelling Dictionaries
 " ============
 function! settings#language#SpellingDictionaryList(path)
     return map( split(globpath(a:path, "spell/*.spl"), '\n'), '[substitute(v:val, ''.*spell[/\\]\(..\)\.[^/\\]*\.spl'', ''\1'', ''''), fnamemodify(v:val, '':t:r''), v:val]')
 endfunction
+
+" ============
+" Spelling Dictionaries
+" ============
+function! settings#language#SetSpellingDictionary(dict) abort
+    exe 'set spl='.a:dict.' spell'
+    echomsg "Spelling Dictionary: " . &spl == "" ? "None" : &spl
+endfunction
+
 
 " ===================================================================
 " End
