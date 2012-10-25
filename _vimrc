@@ -322,6 +322,13 @@ nmap <leader>wV <Plug>WindowNewVertical
 nmap <leader>wr <Plug>WindowRotateLayout
 nmap <leader>wm <Plug>WindowMaximize
 nmap <leader>wM <Plug>WindowMinimize
+nmap <leader>w= <Plug>WindowResizeEqual
+
+" ============
+" Diff Mappings
+" ============
+nmap <M-Up>   <Plug>DiffNext
+nmap <M-Down> <Plug>DiffPrev
 
 " ============
 " Tab Mappings
@@ -336,6 +343,11 @@ nmap <C-S-TAB>  <Plug>TabGoToPrev
 " ============
 vmap <TAB>      <Plug>TextMoveLineRight
 vmap <S-TAB>    <Plug>TextMoveLineLeft
+
+" ============
+" Spelling Mappings
+" ============
+nmap <leader>sp <Plug>OptionsToggleSpellChecking
 
 " ===================================================================
 " External Config Files
