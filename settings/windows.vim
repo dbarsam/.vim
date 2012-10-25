@@ -101,6 +101,11 @@ nnoremap <Plug>TabGoToLast              :TabLast<CR>
 nnoremap <Plug>TabGoToNext              :TabNext<CR>
 nnoremap <Plug>TabGoToPrev              :TabPrev<CR>
 
+nnoremap <Plug>TabMoveHome              :TabMoveHome<CR>
+nnoremap <Plug>TabMoveEnd               :TabMoveEnd<CR>
+nnoremap <Plug>TabMoveRight             :TabMoveRight<CR>
+nnoremap <Plug>TabMoveLeft              :TabMoveLeft<CR>
+
 " Buffer Commands
 nnoremap <Plug>BufferNew                :BufferNew<CR>
 nnoremap <Plug>BufferDelete             :BufferDelete<CR>
