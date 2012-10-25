@@ -140,6 +140,8 @@ vnoremap <Plug>TextSelectBlock      <C-C><C-V>
 inoremap <Plug>TextSelectBlock      <C-O><C-V>
 cnoremap <Plug>TextSelectBlock      <C-C><C-V>
 
+vnoremap <Plug>TextConvertToBlockwiseSelection <C-V>
+
 " Text Manipulation
 nnoremap <Plug>TextMoveDown         mz:m+<CR>`z
 nnoremap <Plug>TextMoveUp           mz:m-2<CR>`z
