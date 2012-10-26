@@ -86,6 +86,33 @@ an 9999.90 &Help.&About                         :intro<CR>
 " File Menu
 " ===================================================================
 
+" ============
+" Internal Functions
+" ============
+
+" The File.Recent Files submenu
+function! s:FileMenuRecentFiles() abort
+    silent! aunmenu File.&Recent\ Files\.\.\.
+    if exists("v:oldfiles")
+        let i = 1
+        let j = 1
+        for file in v:oldfiles
+            if strpart(file, 0, strlen($VIMRUNTIME)) != $VIMRUNTIME
+                exe 'am 10.600 &File.&Recent\ Files\.\.\..&' . j.'\ '. escape(fnamemodify(file, ':p'), ' \\.') . ' :EditRecentFile ' . i . '<CR>'
+                let j += 1
+                if j == 10
+                    break
+                endif
+            endif
+            let i += 1
+        endfor
+        if l:j > 1
+            amenu 10.600 &File.&Recent\ Files\.\.\..-SEP1-            <Nop>
+            amenu 10.600 &File.&Recent\ Files\.\.\..More\ Files\.\.\. <Plug>CoreBrowseRecentFiles
+        endif
+    endif
+endfunction
+
 " Basic Operations
 amenu <silent> 10.300 &File.&New<Tab>:e                             <Plug>SystemFileNew
 amenu <silent> 10.310 &File.&Open\.\.\.<Tab>:sp                     <Plug>SystemFileOpen
@@ -107,10 +134,21 @@ amenu <silent> 10.430 &File.Split\ Patched\ &By\.\.\.<Tab>:diffp    <Plug>DiffPa
 amenu <silent> 10.500 &File.-SEP4-                                  <Nop>
 VMenu <silent> 10.500 &File.&Print\.\.\. <Plug>SystemFilePrint
 
-" Exit
+" Recent Files
 amenu 10.600 &File.-SEP5-                                           <Nop>
-amenu 10.610 &File.Sa&ve-Exit<Tab>:wqa                              <Plug>SystemExitSave
-amenu 10.620 &File.E&xit<Tab>:qa                                    <Plug>SystemExit
+
+" Exit
+amenu 10.700 &File.-SEP6-                                           <Nop>
+amenu 10.710 &File.Sa&ve-Exit<Tab>:wqa                              <Plug>SystemExitSave
+amenu 10.720 &File.E&xit<Tab>:qa                                    <Plug>SystemExit
+
+" ============
+" Auto Command Group
+" ============
+augroup FileMenuGroup
+    au!
+    auto VimEnter *  call <SID>FileMenuRecentFiles()
+augroup END
 
 " ===================================================================
 " Edit Menu

@@ -47,6 +47,17 @@ function! settings#core#SaveVimSession()
 endfunction
 
 " ============
+" Jump to a recent file (stored in viminfo)
+" ============
+function! settings#core#EditRecentFile(...)
+    if a:0 == 0
+        browse oldfiles
+    elseif a:0 == 1
+        exe 'e#<' . str2nr(a:1) 
+    endif
+endfunction
+
+" ============
 " Select a session to view
 " Default to current session name if present
 " ============

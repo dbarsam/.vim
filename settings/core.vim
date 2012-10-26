@@ -66,6 +66,8 @@ com! -bar -nargs=0 ReloadFileType           source $VIMFILES/filetype.vim
 com! -bar -nargs=0 EditScripts              confirm edit $VIMFILES/scripts.vim
 com! -bar -nargs=0 ReloadScripts            source $VIMFILES/scripts.vim
 
+com! -bar -nargs=? EditRecentFile           call settings#core#EditRecentFile(<f-args>)
+
 " ============
 " Plugin Mapping
 " ============
@@ -89,6 +91,9 @@ nnoremap <Plug>CoreEditFileType         :EditFileType<CR>
 nnoremap <Plug>CoreReloadFileType       :ReloadFileType<CR>
 nnoremap <Plug>CoreEditScripts          :EditScripts<CR>
 nnoremap <Plug>CoreReloadScripts        :ReloadScripts<CR>
+
+" Recent Files Commands
+nnoremap <Plug>CoreBrowseRecentFiles    :EditRecentFile<CR>
 
 " Display ASCII value of Current Character
 nnoremap <Plug>CoreGoToAsciiUp          <Up>ga
