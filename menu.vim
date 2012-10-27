@@ -92,12 +92,16 @@ an 9999.90 &Help.&About                         :intro<CR>
 
 " The File.Recent Files submenu
 function! s:FileMenuRecentFiles() abort
-    silent! aunmenu File.&Recent\ Files\.\.\.
     if exists("v:oldfiles")
+        silent! aunmenu File.&Recent\ Files\.\.\.
+        " Exclude some directories from our list
+        let exdirs = [
+                    \fnamemodify(&helpfile, ":p:h:gs?\\?/?")
+                    \]
         let i = 1
         let j = 1
         for file in v:oldfiles
-            if strpart(file, 0, strlen($VIMRUNTIME)) != $VIMRUNTIME
+            if index(exdirs, fnamemodify(file, ":p:h:gs?\\?/?")) == -1
                 exe 'am 10.600 &File.&Recent\ Files\.\.\..&' . j.'\ '. escape(fnamemodify(file, ':p'), ' \\.') . ' :EditRecentFile ' . i . '<CR>'
                 let j += 1
                 if j == 10
@@ -106,7 +110,7 @@ function! s:FileMenuRecentFiles() abort
             endif
             let i += 1
         endfor
-        if l:j > 1
+        if j > 1
             amenu 10.600 &File.&Recent\ Files\.\.\..-SEP1-            <Nop>
             amenu 10.600 &File.&Recent\ Files\.\.\..More\ Files\.\.\. <Plug>CoreBrowseRecentFiles
         endif
@@ -136,6 +140,7 @@ VMenu <silent> 10.500 &File.&Print\.\.\. <Plug>SystemFilePrint
 
 " Recent Files
 amenu 10.600 &File.-SEP5-                                           <Nop>
+amenu 10.610 &File.&Recent\ Files\.\.\.                             <Nop>
 
 " Exit
 amenu 10.700 &File.-SEP6-                                           <Nop>
