@@ -183,7 +183,7 @@ endf
 " Open the selected text as a file
 " ============
 function! settings#system#OpenFileFromSelectedText() range
-    normal gf
+    normal! gf
 endfunction
 
 " ============

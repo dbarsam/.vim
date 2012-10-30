@@ -122,7 +122,7 @@ fun! settings#diff#VisualDiff(...) range
         
         " open new tab, paste second selected block
         tabnew
-        normal P
+        normal! P
         " to prevent 'No write since last change' message:
         se buftype=nowrite
         diffthis
@@ -133,7 +133,7 @@ fun! settings#diff#VisualDiff(...) range
 
             " copy diff item into unnamed register & paste
             let @@ = diffitem
-            normal P
+            normal! P
             se buftype=nowrite
 
             " start diff
@@ -169,7 +169,7 @@ func! settings#diff#DiffUnsavedChanges()
     tabnew
     exe "buffer " . l:bufnum
     diffthis 
-    vnew | r # | normal 1Gdd 
+    vnew | r # | normal! 1Gdd 
     diffthis 
     call settings#diff#EnableDiffModeSettings(&diff)
     exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype 

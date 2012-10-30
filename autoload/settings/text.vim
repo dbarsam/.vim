@@ -11,7 +11,7 @@
 " Select All
 " ============
 func! settings#text#TextSelectAll() abort
-    exe "norm gg" . (&slm == "" ? "VG" : "gH\<C-O>G")
+    exe "normal! gg" . (&slm == "" ? "VG" : "gH\<C-O>G")
 endf
 
 " ============
@@ -27,11 +27,11 @@ function! settings#text#TextVisualSearch(flag) range
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
     if a:flag == '*'
-        execute "normal /" . l:pattern . "^M"
+        execute "normal! /" . l:pattern . "^M"
     elseif a:flag == 'gv'
         execute "vimgrep " . '/'. l:pattern . '/' . ' **/*.'
     elseif a:flag == '#'
-        execute "normal ?" . l:pattern . "^M"
+        execute "normal! ?" . l:pattern . "^M"
     endif
 
     let @/ = l:pattern

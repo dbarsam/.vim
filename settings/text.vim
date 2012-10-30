@@ -52,17 +52,17 @@ com! -bar -nargs=0 FormatDoubleSpace        g/^/put_                   " Double 
 com! -bar -nargs=0 FormatReverse            g/^/m0                     " Reverse The Buffer
 com! -bar -nargs=0 FormatReverseSelection   'a,'bg/^/m'b               " Reverse The Selection
 com! -bar -nargs=0 FormatParagraph          gql                        " Breaks a line of text into a paragraph of the current textwidth
-com! -bar -nargs=0 FormatBuffer             normal gg=G                " Format Buffer using equalprg
-com! -bar -nargs=0 FormatFile               normal ggVG=               " Format File using equalprg
+com! -bar -nargs=0 FormatBuffer             normal! gg=G               " Format Buffer using equalprg
+com! -bar -nargs=0 FormatFile               normal! ggVG=              " Format File using equalprg
 
 " Formats the Line with title case, i.e. initial capitals
 com! -bar -nargs=0 FormatTitle              s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g
 com! -bar -range -nargs=0 FormatTitleRange  s/\%V\(\w\)\(\w*\)\%V/\u\1\L\2/g
 
 " Underlining
-com! -bar -nargs=1 DrawLineUnder            normal yypv$r<args>k       " Places a line of characters below the line
-com! -bar -nargs=1 DrawLineOver             normal yyPv$r<args>j       " Places a line of characters above the line
-com! -bar -nargs=1 DrawLineDouble           normal yypv$r<args>yykPj   " Places a line of characters above *and* below the line
+com! -bar -nargs=1 DrawLineUnder            normal! yypv$r<args>k      " Places a line of characters below the line
+com! -bar -nargs=1 DrawLineOver             normal! yyPv$r<args>j      " Places a line of characters above the line
+com! -bar -nargs=1 DrawLineDouble           normal! yypv$r<args>yykPj  " Places a line of characters above *and* below the line
 
 " Moving Lines Of Text
 " Based On: http://vim.wikia.com/wiki/Moving_lines_up_or_down_in_a_file
@@ -72,7 +72,7 @@ com! -bar -range -nargs=? MoveRangeDown     '<,'>move '>+<args>
 com! -bar -range -nargs=? MoveRangeUp       '<,'>move '<-1-<args>
 
 " Statistics
-com! -bar -range -nargs=0 WordCount         normal g<C-G>               " Word Count
+com! -bar -range -nargs=0 WordCount         normal! g<C-G>              " Word Count
 com! -bar -nargs=1 WordInstanceCount        %s/<args>//gn               " Word Instance Counting
 
 " ============
