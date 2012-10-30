@@ -77,7 +77,7 @@ function! settings#core#EditColorscheme() abort
     elseif !exists("g:colors_name")
         echomsg "Cannot Edit Colorscheme: Syntax coloring has no color scheme file."
     else
-        let colors_file = split(globpath(&rtp, "colors/".g:colors_name.".vim"), '\n')[0]
+        let colors_file = get( split(globpath(&rtp, "colors/".g:colors_name.".vim"), '\n'), 0, '')
         if filereadable(l:colors_file)
             if has($VIMFILES) && strridx(l:colors_file, $VIMFILES) != -1
                 exe 'confirm edit ' . l:colors_file
