@@ -208,25 +208,25 @@ endfunction
 function! s:EditMenuStatusLine() abort
     if has('statusline') && exists('g:StatusLines')
         silent! aunmenu Edit.Status\ Line\.\.\.
-        am 20.1000.100 &Edit.Status\ Line\.\.\..default        :StatusLineEnableTitle default<CR>
+        am 20.1000.100 &Edit.Status\ Line\.\.\..default        :EnableStatusLine default<CR>
         let otherLines = sort(filter(keys(g:StatusLines), 'v:val != "default"'))
         let index = 1
         if (!empty(l:otherLines))
             am 20.1000.100 &Edit.Status\ Line\.\.\..-SEP1-    <Nop>
             for key in l:otherLines
-                execute 'am 20.1000.100 &Edit.Status\ Line\.\.\..' . escape(l:index < 10 ? '&'.string(l:index).' '.key : key, ' ') . ' :StatusLineEnableTitle ' . key . '<CR>'
+                execute 'am 20.1000.100 &Edit.Status\ Line\.\.\..' . escape(l:index < 10 ? '&'.string(l:index).' '.key : key, ' ') . ' :EnableStatusLine ' . key . '<CR>'
                 let l:index += 1
             endfor
         endif
     elseif has('cmdline_info') && exists('g:RulerFormats')
         silent! aunmenu Edit.Rulers\.\.\.
-        am 20.1000.100 &Edit.Rulers\.\.\..default        :StatusLineEnableRuler default<CR>
+        am 20.1000.100 &Edit.Rulers\.\.\..default        :EnableRuler default<CR>
         let otherRulers = sort(filter(keys(g:RulerFormats), 'v:val != "default"'))
         let index = 1
         if (!empty(l:otherRulers))
             am 20.1000.100 &Edit.Ruler\.\.\..-SEP1-    <Nop>
             for key in l:otherRulers
-                execute 'am 20.1000.100 &Edit.Ruler\.\.\..&' . l:index . ' ' . escape(l:index < 10 ? '&'.string(l:index).' '.key : key, ' ') . ' :StatusLineEnableRuler ' . key . '<CR>'
+                execute 'am 20.1000.100 &Edit.Ruler\.\.\..&' . l:index . ' ' . escape(l:index < 10 ? '&'.string(l:index).' '.key : key, ' ') . ' :EnableRuler ' . key . '<CR>'
                 let l:index += 1
             endfor
         endif
