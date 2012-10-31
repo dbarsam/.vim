@@ -355,8 +355,9 @@ nmap <leader>sp <Plug>OptionsToggleSpellChecking
 
 " ============
 " Auxiliary Settings
+" (Auxiliary Plugin Settings are managed by the BundleManager)
 " ============
-runtime! settings/**/*.vim
+runtime! settings/*.vim
 
 " ============
 " Custom Menus - This will load the first menu.vim file in our rtp, 

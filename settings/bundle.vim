@@ -49,7 +49,7 @@ let s:BundleFile = expand('$VIMBUNDLE/bundle.vim')
 function! BundleRegister(name, path)
     let s:BundleList[a:name] = a:path
 endf
-   
+
 " Bundle Init - Setting up Vundle automatically
 " From http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
 func! BundleManagerInit()
@@ -82,9 +82,10 @@ func! BundleManagerInit()
     set rtp+=$VIMBUNDLE/vundle/
     call vundle#rc($VIMBUNDLE)
 
-    " process the other bundles
+    " process the other bundles and load their settings
     for [name, bundle] in items(s:BundleList)
-       Bundle bundle
+        exe 'runtime! settings/plugin-settings/*'.name.'*'
+        Bundle bundle
     endfor 
     
     " cleanup *.git files
