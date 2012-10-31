@@ -13,6 +13,11 @@
 BundleRegister 'VimTweak'   'https://github.com/dbarsam/vim-vimtweak.git' 
 BundleRegister 'Restart'    'https://github.com/tyru/restart.vim.git' 
 
+" ============
+" External Git Repositories
+" ============
+BundleRegister 'VcsCommand' 'http://repo.or.cz/r/vcscommand.git'
+
 " ===================================================================
 " End
 " ===================================================================
