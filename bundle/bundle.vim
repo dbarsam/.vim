@@ -15,6 +15,11 @@ BundleRegister TComment   'https://github.com/tomtom/tcomment_vim.git'
 BundleRegister Restart    'https://github.com/tyru/restart.vim.git' 
 
 " ============
+" GitHub Vim-Script Mirror Repositories 
+" ============
+BundleRegister TagList    'https://github.com/vim-scripts/taglist.vim.git'
+
+" ============
 " External Git Repositories
 " ============
 BundleRegister VcsCommand 'http://repo.or.cz/r/vcscommand.git'
