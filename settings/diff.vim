@@ -12,15 +12,15 @@ endif
 let g:loaded_settings_diff_plugin = 1 
 
 " ============
+" Plugin Requirements
+" ============
+runtime settings/statusline.vim
+
+" ============
 " Disable Compatibility Options
 " ============
 let s:save_cpo = &cpo
 set cpo&vim
-
-" ============
-" Requirements
-" ============
-runtime settings/statusline.vim
 
 " ============
 " Plugin Data

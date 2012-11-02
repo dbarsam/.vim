@@ -12,7 +12,7 @@ endif
 let g:loaded_settings_syntax_plugin = 1
 
 " ============
-" Requirements
+" Plugin Requirements
 " ============
 runtime settings/statusline.vim
 

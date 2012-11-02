@@ -12,14 +12,9 @@ endif
 let g:loaded_settings_bundle_plugin = 1 
 
 " ============
-" Disable Compatibility Options
-" ============
-let s:save_cpo = &cpo
-set cpo&vim
-
+" Plugin Requirements
 " ============
 " Plugin is only valid if git is in the path
-" ============
 if !executable("git")
     echoerr expand('%')." requires git in the path."
     finish
@@ -28,6 +23,12 @@ endif
 if !executable("curl")
     echohl WarningMsg | echo expand('%')." requires curl in the path for some functionality." | echohl None
 endif
+
+" ============
+" Disable Compatibility Options
+" ============
+let s:save_cpo = &cpo
+set cpo&vim
 
 " ============
 " Global Variables
