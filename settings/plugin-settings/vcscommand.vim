@@ -12,23 +12,21 @@ endif
 let g:loaded_settings_vcscommand_plugin = 1 
 
 " ============
-" Disable Compatibility Options
-" ============
-let s:save_cpo = &cpo
-set cpo&vim
-
+"  Plugin Requirements
 " ============
 " Plugin is only valid if the following programs are installed:
-" ============
 if !(executable("git") || executable("svn") || executable("svk") || executable("vcs") || executable("bzr") ||  executable("hg"))
     let VCSCommandDisableAll = 1
     finish
 endif
 
-" ============
-" Requirements
-" ============
 runtime settings/statusline.vim
+
+" ============
+" Disable Compatibility Options
+" ============
+let s:save_cpo = &cpo
+set cpo&vim
 
 " ============
 " Plugin Data
