@@ -11,6 +11,7 @@
 " GitHub Git Repositories 
 " ============
 BundleRegister VimTweak   'https://github.com/dbarsam/vim-vimtweak.git' 
+BundleRegister TComment   'https://github.com/tomtom/tcomment_vim.git' 
 BundleRegister Restart    'https://github.com/tyru/restart.vim.git' 
 
 " ============
