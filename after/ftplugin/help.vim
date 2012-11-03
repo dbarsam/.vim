@@ -9,6 +9,10 @@
 " Based On:       http://vim.wikia.com/wiki/Mapping_to_quickly_browse_help
 "                 http://stackoverflow.com/questions/1683849/mouse-input-in-gvim
 " ===================================================================
+if exists("b:did_ftplugin_after")
+    finish
+endif
+let b:did_ftplugin_after = 1
 
 " ============
 " Disable Compatibility Options
