@@ -9,7 +9,7 @@
 " Based On:       http://vim.wikia.com/wiki/Dosini_files
 " ===================================================================
 if exists("b:did_ftplugin_after")
-	finish
+    finish
 endif
 let b:did_ftplugin_after = 1
 
