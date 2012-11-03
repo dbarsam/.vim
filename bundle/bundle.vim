@@ -15,6 +15,7 @@ BundleRegister Solarized        'https://github.com/altercation/vim-colors-solar
 BundleRegister TComment         'https://github.com/tomtom/tcomment_vim.git' 
 BundleRegister Restart          'https://github.com/tyru/restart.vim.git' 
 BundleRegister Ps1              'https://github.com/pprovost/vim-ps1.git'
+BundleRegister CtrlP            'https://github.com/kien/ctrlp.vim.git'
 
 " ============
 " GitHub Vim-Script Mirror Repositories 
