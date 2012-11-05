@@ -24,6 +24,7 @@ BundleRegister NERDTree         'https://github.com/scrooloose/nerdtree.git'
 " ============
 " GitHub Vim-Script Mirror Repositories 
 " ============
+BundleRegister BufExplorer      'https://github.com/vim-scripts/bufexplorer.zip.git'
 BundleRegister TagList          'https://github.com/vim-scripts/taglist.vim.git'
 BundleRegister SearchComplete   'https://github.com/vim-scripts/SearchComplete.git'
 
