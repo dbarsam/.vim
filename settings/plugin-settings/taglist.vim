@@ -40,7 +40,7 @@ let g:Tlist_Close_On_Select = 1         " Close on Select
 " ============
 " Plugin Mapping
 " ============
-map <leader>t :TlistToggle<CR>
+map <leader>tl :TlistToggle<CR>
 
 " ============
 " Status Line and Title String
