@@ -17,6 +17,8 @@ BundleRegister Restart          'https://github.com/tyru/restart.vim.git'
 BundleRegister Ps1              'https://github.com/pprovost/vim-ps1.git'
 BundleRegister CtrlP            'https://github.com/kien/ctrlp.vim.git'
 BundleRegister EasyMotion       'https://github.com/Lokaltog/vim-easymotion.git'
+BundleRegister TagBar           'https://github.com/majutsushi/tagbar.git'
+
 " ============
 " GitHub Vim-Script Mirror Repositories 
 " ============
