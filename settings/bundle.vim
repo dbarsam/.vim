@@ -47,15 +47,15 @@ let s:BundleFile = expand('$VIMBUNDLE/bundle.vim')
 " ============
 
 " Bundle Register 
-function! BundleRegister(name, path)
+function! s:BundleRegister(name, path)
     let s:BundleList[a:name] = a:path
-endf
+endfunction
 
 " Bundle Init - Setting up Vundle automatically
 " From http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
-func! BundleManagerInit()
+function! s:BundleManagerInit()
 
-    call BundleRegister("Vundle", "https://github.com/gmarik/vundle")
+    BundleRegister Vundle 'https://github.com/gmarik/vundle'
     if filereadable(s:BundleFile)
         exe "source " . s:BundleFile
     endif
@@ -98,10 +98,10 @@ func! BundleManagerInit()
     if (l:ftstate[1] == "ON") | filetype on | endif
     if (l:ftstate[2] == "ON") | filetype plugin on | endif
     if (l:ftstate[3] == "ON") | filetype indent on | endif
-endf
+endfunction
 
 " Bundle Install - Kick off the install process for bundles
-func! BundleManagerInstall()
+function! s:BundleManagerInstall()
 
     BundleInstall
 
@@ -109,14 +109,15 @@ func! BundleManagerInstall()
     for file in split(globpath($VIMBUNDLE, "**/.git"), '\n')
         " echomsg file
     endfor    
-endf
+endfunction
 
 " ============
 " Bundle Commands
 " ============
-com! -bar -nargs=+ BundleRegister        call BundleRegister(<f-args>)
-com! -bar -nargs=0 BundleManagerInit     call BundleManagerInit()
-com! -bar -nargs=0 BundleManagerInstall  call BundleManagerInstall()
+com! -bar -nargs=+ BundleRegister        call <SID>BundleRegister(<f-args>)
+com! -bar -nargs=0 BundleManagerInit     call <SID>BundleManagerInit()
+com! -bar -nargs=0 BundleManagerInstall  call <SID>BundleManagerInstall()
+com! -bar -nargs=0 BundleManagerUpdate   call <SID>BundleManagerInit() | call <SID>BundleManagerInstall()
 
 " ============
 " Restore Compatibility Options
