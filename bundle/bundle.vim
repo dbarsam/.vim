@@ -22,10 +22,12 @@ BundleRegister TagBar           'https://github.com/majutsushi/tagbar.git'
 BundleRegister Tabular          'https://github.com/godlygeek/tabular.git'
 BundleRegister NERDTree         'https://github.com/scrooloose/nerdtree.git'
 BundleRegister Repeat           'https://github.com/tpope/vim-repeat.git'
+BundleRegister Perforce         'https://github.com/dbarsam/vim-perforce.git'
 
 " ============
 " GitHub Vim-Script Mirror Repositories 
 " ============
+BundleRegister genutils         'https://github.com/vim-scripts/genutils'
 BundleRegister ZoomWin          'https://github.com/vim-scripts/ZoomWin.git'
 BundleRegister BufExplorer      'https://github.com/vim-scripts/bufexplorer.zip.git'
 BundleRegister TagList          'https://github.com/vim-scripts/taglist.vim.git'
