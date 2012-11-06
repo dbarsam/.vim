@@ -28,6 +28,9 @@ runtime settings/tags.vim
 " ============
 " Plugin Mappings
 " ============
+" Map 'q' to quit help
+nnoremap <buffer> q :silent! bd<CR>
+ 
 " Jump the page with the Space Bar
 nnoremap <buffer> <Space>   <PageDown>
 nnoremap <buffer> <S-Space> <PageUp>
