@@ -21,6 +21,7 @@ BundleRegister EasyMotion       'https://github.com/Lokaltog/vim-easymotion.git'
 BundleRegister TagBar           'https://github.com/majutsushi/tagbar.git'
 BundleRegister Tabular          'https://github.com/godlygeek/tabular.git'
 BundleRegister NERDTree         'https://github.com/scrooloose/nerdtree.git'
+BundleRegister Repeat           'https://github.com/tpope/vim-repeat.git'
 
 " ============
 " GitHub Vim-Script Mirror Repositories 
