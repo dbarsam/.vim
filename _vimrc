@@ -378,7 +378,9 @@ endif
 " ===================================================================
 
 if exists(":SyntaxInit")
-    SyntaxInit rusty
+    if has("gui_running") || $EMULATOR == "console2"
+        SyntaxInit rusty
+    endif
 endif
 
 " ===================================================================
