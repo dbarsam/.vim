@@ -27,6 +27,7 @@ BundleRegister Perforce         'https://github.com/dbarsam/vim-perforce.git'
 " ============
 " GitHub Vim-Script Mirror Repositories 
 " ============
+BundleRegister YankRing         'https://github.com/vim-scripts/YankRing.vim.git'
 BundleRegister genutils         'https://github.com/vim-scripts/genutils'
 BundleRegister ZoomWin          'https://github.com/vim-scripts/ZoomWin.git'
 BundleRegister BufExplorer      'https://github.com/vim-scripts/bufexplorer.zip.git'
