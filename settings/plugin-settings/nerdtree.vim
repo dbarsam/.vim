@@ -20,7 +20,7 @@ set cpo&vim
 " ============
 " Plugin Mapping
 " ============
-map <leader>nt :NERDTree<CR>
+nnoremap <silent> <leader>nt :NERDTree<CR>
 
 " ============
 " Restore Compatibility Options
