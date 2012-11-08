@@ -13,6 +13,7 @@
 BundleRegister CtrlP            'https://github.com/kien/ctrlp.vim.git'
 BundleRegister EasyMotion       'https://github.com/Lokaltog/vim-easymotion.git'
 BundleRegister JellyBeans       'https://github.com/nanotech/jellybeans.vim.git'
+BundleRegister MatchIt          'https://github.com/tmhedberg/matchit'
 BundleRegister NERDTree         'https://github.com/scrooloose/nerdtree.git'
 BundleRegister Perforce         'https://github.com/dbarsam/vim-perforce.git'
 BundleRegister Ps1              'https://github.com/pprovost/vim-ps1.git'
