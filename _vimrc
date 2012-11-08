@@ -238,7 +238,7 @@ let mapleader = ";"
 " ============
 " Console Specific Menu
 " ============
-map <leader>mm <Plug>CoreShowConsoleMenu
+map <leader>em <Plug>CoreShowConsoleMenu
 
 " ============
 " Function Key Presets
