@@ -18,6 +18,11 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " ============
+" Plugin Commands
+" ============
+command! -bar RestartWithSession let g:restart_sessionoptions = 'blank,curdir,folds,help,localoptions,tabpages' | Restart  
+
+" ============
 " Menu Configuration
 " ============
 amenu 10.690 &File.-SEPRESTART-         <Nop>
