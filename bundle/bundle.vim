@@ -10,6 +10,7 @@
 " ============
 " GitHub Git Repositories 
 " ============
+BundleRegister BufKill          'https://github.com/dbarsam/vim-bufkill.git' 
 BundleRegister CtrlP            'https://github.com/kien/ctrlp.vim.git'
 BundleRegister EasyMotion       'https://github.com/Lokaltog/vim-easymotion.git'
 BundleRegister JellyBeans       'https://github.com/nanotech/jellybeans.vim.git'
