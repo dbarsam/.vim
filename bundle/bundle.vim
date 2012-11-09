@@ -31,6 +31,7 @@ BundleRegister VimTweak         'https://github.com/dbarsam/vim-vimtweak.git'
 " GitHub Vim-Script Mirror Repositories 
 " ============
 BundleRegister BufExplorer      'https://github.com/vim-scripts/bufexplorer.zip.git'
+BundleRegister ConfluenceWiki   'https://github.com/vim-scripts/confluencewiki.vim.git'
 BundleRegister SearchComplete   'https://github.com/vim-scripts/SearchComplete.git'
 BundleRegister TagList          'https://github.com/vim-scripts/taglist.vim.git'
 BundleRegister YankRing         'https://github.com/vim-scripts/YankRing.vim.git'

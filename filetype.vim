@@ -19,6 +19,7 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.hta	setfiletype wsh
     au! BufRead,BufNewFile *.dspkg	setfiletype dosini
     au! BufRead,BufNewFile *.jsx	setfiletype javascript
+    au! BufRead,BufNewFile *.wiki   setfiletype confluencewiki    
 augroup END
 
 " ===================================================================
