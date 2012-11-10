@@ -56,6 +56,10 @@ let g:yankring_o_keys  = 'b B w W e E d h j k l H M L y G ^ 0 $ ,'
 let g:yankring_o_keys .= ' g_  g^ gm g$ gk gj gg ge gE - + _ '
 let g:yankring_o_keys .= ' iw iW aw aW as is ap ip a] a[ i] i[ a) a( ab i) i( ib a> a< i> i< at it a} a{ aB i} i{ iB a" a'' a` i" i'' i`'
 
+" Remove <Ctrl-P> and <Ctrl-N> from YankRing mappings
+let g:yankring_replace_n_pkey = '<C-Y><C-P>'
+let g:yankring_replace_n_nkey = '<C-Y><C-N>'
+
 " ============
 " Plugin Mapping
 " ============
