@@ -39,6 +39,7 @@ BundleRegister TagList          'https://github.com/vim-scripts/taglist.vim.git'
 BundleRegister YankRing         'https://github.com/vim-scripts/YankRing.vim.git'
 BundleRegister ZoomWin          'https://github.com/vim-scripts/ZoomWin.git'
 BundleRegister genutils         'https://github.com/vim-scripts/genutils'
+BundleRegister utl              'https://github.com/vim-scripts/utl.vim.git'
 
 " ============
 " External Git Repositories
