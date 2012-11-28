@@ -10,6 +10,7 @@
 " ============
 " GitHub Git Repositories 
 " ============
+BundleRegister Actionscript     'https://github.com/endel/actionscript.vim'
 BundleRegister BufKill          'https://github.com/dbarsam/vim-bufkill.git' 
 BundleRegister CtrlP            'https://github.com/kien/ctrlp.vim.git'
 BundleRegister EasyMotion       'https://github.com/Lokaltog/vim-easymotion.git'
@@ -39,6 +40,7 @@ BundleRegister TagList          'https://github.com/vim-scripts/taglist.vim.git'
 BundleRegister YankRing         'https://github.com/vim-scripts/YankRing.vim.git'
 BundleRegister ZoomWin          'https://github.com/vim-scripts/ZoomWin.git'
 BundleRegister genutils         'https://github.com/vim-scripts/genutils'
+BundleRegister utl              'https://github.com/vim-scripts/utl.vim.git'
 
 " ============
 " External Git Repositories
