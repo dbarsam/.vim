@@ -23,6 +23,7 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 let g:ctrlpMapLeaderOp2 = g:mapleader . "C"
+let g:ctrlp_cache_dir = '$VIMFILES/.ctrlp'
 
 " ============
 " Restore Compatibility Options
