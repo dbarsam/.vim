@@ -47,8 +47,11 @@ let g:yankring_window_use_right = 1
 let g:yankring_manage_numbered_reg = 1
 
 if exists("$VIMFILES")
-    let g:yankring_history_dir = "$VIMFILES"
-    let g:yankring_history_file = "vimyr"
+    let g:yankring_history_dir = expand('$VIMFILES/.yankring')
+    let g:yankring_history_file = "cache"
+    if !isdirectory(g:yankring_history_dir) && exists("*mkdir")
+        call mkdir(g:yankring_history_dir)
+    endif
 endif
 
 " Remove ';' from o-motions and text objects since it conflicts with our <leader>
