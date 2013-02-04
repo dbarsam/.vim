@@ -1,0 +1,17 @@
+# ========================================================================
+#                             GitIgnore for .vim
+# ========================================================================
+
+# Vim Scratch Files & Directories
+.backup/
+.swap/
+.undo/
+viminfo.txt
+
+# Vim Plugin Scratch Files & Directories
+.ctrlp/
+.yankring/
+vimp4.txt
+
+# Vim Bundles are managed via Vundle plugin and not GitHub forks
+bundle/
