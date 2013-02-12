@@ -52,8 +52,10 @@ function! s:BundleRegister(name, path)
 endfunction
 
 " Bundle Init - Setting up Vundle automatically
-" From http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" From https://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
 function! s:BundleManagerInit()
+
+    let g:vundle_default_git_proto = "ssh"
 
     BundleRegister Vundle 'https://github.com/gmarik/vundle'
     if filereadable(s:BundleFile)
@@ -74,25 +76,40 @@ function! s:BundleManagerInit()
     endif
 
     " check if Vundle exixts
-    if !filereadable( expand('$VIMBUNDLE/vundle/README.md') )
+    let installed = filereadable( expand('$VIMBUNDLE/vundle/README.md') )
+    if !installed
         echomsg "Installing Vundle for the first time..."
         execute "silent !git clone https://github.com/gmarik/vundle ".shellescape(expand('$VIMBUNDLE/vundle'))
+        if v:shell_error
+            echoerr "Could not install Vundle via HTTPS, trying GIT..."
+            execute "silent !git clone git://github.com/gmarik/vundle.git ".shellescape(expand('$VIMBUNDLE/vundle'))
+        endif
+        if v:shell_error
+            echoerr "Could not install Vundle via HTTPS, trying SSH..."
+            execute "silent !git clone git@github.com:/gmarik/vundle ".shellescape(expand('$VIMBUNDLE/vundle'))
+        endif
+        " re-check if Vundle exixts
+        let installed = filereadable( expand('$VIMBUNDLE/vundle/README.md') )
     endif
 
     " init Vundle
-    set rtp+=$VIMBUNDLE/vundle/
-    call vundle#rc($VIMBUNDLE)
+    if installed
+        set rtp+=$VIMBUNDLE/vundle/
+        call vundle#rc($VIMBUNDLE)
 
-    " process the other bundles and load their settings
-    for [name, bundle] in items(s:BundleList)
-        exe 'runtime! settings/plugin-settings/*'.name.'*'
-        Bundle bundle
-    endfor 
-    
-    " cleanup *.git files
-    for file in split(globpath($VIMBUNDLE, "**/.git"), '\n')
-        " echomsg file
-    endfor
+        " process the other bundles and load their settings
+        for [name, bundle] in items(s:BundleList)
+            exe 'runtime! settings/plugin-settings/*'.name.'*'
+            Bundle bundle
+        endfor 
+        
+        " cleanup *.git files
+        for file in split(globpath($VIMBUNDLE, "**/.git"), '\n')
+            " echomsg file
+        endfor
+    else
+        echoerr "Could not install Vundle!  Bundles are offline!"
+    endif
 
     " restore the filetype
     if (l:ftstate[1] == "ON") | filetype on | endif
