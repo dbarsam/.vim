@@ -11,6 +11,7 @@ viminfo.txt
 # Vim Plugin Scratch Files & Directories
 .ctrlp/
 .yankring/
+.nerdtree/
 .netrwhist
 vimp4.txt
 
