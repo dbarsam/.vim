@@ -18,6 +18,20 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " ============
+" Plugin Settings
+" ============
+let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore=[]
+if exists("$VIMFILES")
+    let g:NERDTreeBookmarksDirectory=expand('$VIMFILES/.nerdtree')
+    if !isdirectory(g:NERDTreeBookmarksDirectory) && exists("*mkdir")
+        call mkdir(g:NERDTreeBookmarksDirectory)
+    endif
+    let g:NERDTreeBookmarksFile=g:NERDTreeBookmarksDirectory . '/bookmarks.txt'
+endif
+
+
+" ============
 " Plugin Mapping
 " ============
 nnoremap <silent> <leader>nt :NERDTree<CR>
