@@ -41,7 +41,7 @@ com! -bar -nargs=? ToggleHexMode                call settings#system#ToggleHexMo
 
 " Path Text Manipulation
 com! -nargs=0 OpenFilePathFromClipboard         call settings#system#OpenFilePathFromClipboard()
-com! -nargs=1 CopyFilePathToClipboard           call settings#system#CopyFilePathToClipboard<f-args>)
+com! -nargs=1 CopyFilePathToClipboard           call settings#system#CopyFilePathToClipboard(<f-args>)
 com! -nargs=0 OpenFileFromText                  call settings#system#OpeFileFromText()
 com! -range   LaunchURL                         call settings#system#LaunchURL()
 com! -nargs=0 ConvertPathToUNC                  call settings#system#ConvertToUNC(<f-args>)
