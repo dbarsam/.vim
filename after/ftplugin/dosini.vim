@@ -20,19 +20,9 @@ let s:cpo_save=&cpo
 set cpo&vim
 
 " ============
-" Plugin Syntax
-" ============
-syn region dosiniSection 
-            \ start="^\[" 
-            \ end="\(\n\+\[\)\@=" 
-            \ contains=dosiniLabel,dosiniHeader,dosiniComment
-            \ keepend
-            \ fold
-
-" ============
 " Plugin Settings
 " ============
-" Folding Sections
+" Folding Sections By Syntax - see after/syntax/dosini.vim
 setlocal foldlevel=20       " Open all folds on start-up
 setlocal foldmethod=syntax
 
