@@ -128,6 +128,12 @@ amenu <silent> 10.355 &File.-SEP2-                                  <Nop>
 amenu <silent> 10.360 &File.&Save<Tab>:w                            <Plug>SystemFileSave
 amenu <silent> 10.370 &File.Save\ &As\.\.\.<Tab>:sav                <Plug>SystemFileSaveAs
 
+" Copy functions
+if has("win32") && exists("$DESKTOP")
+    amenu <silent> 10.380 &File.Save\ &To\ Desktop	            	<Plug>SystemFileSaveToDesktop
+endif
+amenu <silent> 10.390 &File.Save\ &As\ Backup		            	<Plug>SaveCopyAsBackup
+
 " Split Operations
 amenu <silent> 10.400 &File.-SEP3-                                  <Nop>
 amenu <silent> 10.410 &File.Sp&lit-Open\.\.\.<Tab>:sp               <Plug>SystemFileSplitOpen
@@ -137,6 +143,20 @@ amenu <silent> 10.430 &File.Split\ Patched\ &By\.\.\.<Tab>:diffp    <Plug>DiffPa
 " Printer Operations
 amenu <silent> 10.500 &File.-SEP4-                                  <Nop>
 VMenu <silent> 10.500 &File.&Print\.\.\. <Plug>SystemFilePrint
+
+" 'Find In System' Operations
+if has("win32")
+    amenu 10.550 &File.-SEP4_5-										<Nop>
+    amenu <silent> 10.551 &File.Show\ In\ Explorer\.\.\.			<Plug>SystemShowFileInExplorer
+    amenu <silent> 10.552 &File.Show\ In\ Console\.\.\.				<Plug>SystemShowFolderInConsole
+endif
+
+" Clipboard Operations
+if has("win32")
+    amenu 10.560 &File.-SEP4_6-										<Nop>
+    amenu <silent> 10.561 &File.Send\ Path\ To\ Clipboard			<Plug>SystemCopyPathFull
+    amenu <silent> 10.562 &File.Open\ File\ From\ Clipboard			<Plug>SystemOpenFromClipboard
+endif
 
 " Recent Files
 amenu 10.600 &File.-SEP5-                                           <Nop>
