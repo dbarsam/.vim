@@ -87,13 +87,13 @@ nnoremap <Plug>SystemExitSave                   :ExitSave<CR>
 nnoremap <Plug>SystemFileSaveToDesktop          :SaveToDesktop<CR>
 nnoremap <Plug>SystemFileSaveAsBackup           :SaveCopyAsBackup<CR>
 
-nnoremap <Plug>SystemShowFileInExplorer         :ShowInExplorer expand("%:p:h")<CR>
-nnoremap <Plug>SystemShowFolderInConsole        :ShowInConsole expand("%:p:h")<CR>
-nnoremap <Plug>SystemShowFolderInPowershell     :PowerShell expand("%:p:h")<CR>
+nnoremap <Plug>SystemShowFileInExplorer         :ShowInExplorer<CR>
+nnoremap <Plug>SystemShowFolderInConsole        :ShowInConsole<CR>
+nnoremap <Plug>SystemShowFolderInPowershell     :ShowInPowerShell<CR>
 
-nnoremap <Plug>SystemCopyPathHead               :CopyPathToClipboard path<CR>
-nnoremap <Plug>SystemCopyPathFull               :CopyPathToClipboard full<CR>
-nnoremap <Plug>SystemOpenFromClipboard          :OpenFileFromClipboard<CR>
+nnoremap <Plug>SystemCopyPathHead               :CopyFilePathToClipboard path<CR>
+nnoremap <Plug>SystemCopyPathFull               :CopyFilePathToClipboard full<CR>
+nnoremap <Plug>SystemOpenFromClipboard          :OpenFilePathFromClipboard<CR>
 
 " Special Exploring Maps
 for var in ["$HOME", "$VIMRUNTIME", "$DESKTOP", "$VIMFILES"]
