@@ -40,6 +40,7 @@ BundleRegister KeepCase         'https://github.com/vim-scripts/keepcase.vim.git
 BundleRegister LargeFile        'https://github.com/vim-scripts/LargeFile.git'
 BundleRegister SearchComplete   'https://github.com/vim-scripts/SearchComplete.git'
 BundleRegister TagList          'https://github.com/vim-scripts/taglist.vim.git'
+BundleRegister TailBundle       'https://github.com/vim-scripts/Tail-Bundle.git'
 BundleRegister YankRing         'https://github.com/vim-scripts/YankRing.vim.git'
 BundleRegister ZoomWin          'https://github.com/vim-scripts/ZoomWin.git'
 BundleRegister genutils         'https://github.com/vim-scripts/genutils'
