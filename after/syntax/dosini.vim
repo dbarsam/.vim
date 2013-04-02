@@ -28,17 +28,17 @@ syn match  dosiniLabel          "^\s\+ ="
 
 " Handle heredoc syntax in the dosini syntax. (Taken from syntax/perl.ini (:%s/perl/dosini/g))
 if exists("dosini_string_as_statement")
-  HiLink dosiniStringStartEnd   dosiniStatement
+  hi link dosiniStringStartEnd   dosiniStatement
 else
-  HiLink dosiniStringStartEnd   dosiniString
+  hi link dosiniStringStartEnd   dosiniString
 endif
-HiLink dosiniHereDoc dosiniString
+hi link dosiniHereDoc dosiniString
 
 syn region dosiniHereDoc matchgroup=dosiniStringStartEnd start=+<<\z(\I\i*\)+      end=+^\z1$+ contains=@dosiniInterpDQ
 syn region dosiniHereDoc matchgroup=dosiniStringStartEnd start=+<<\s*"\z(.\{-}\)"+ end=+^\z1$+ contains=@dosiniInterpDQ
 syn region dosiniHereDoc matchgroup=dosiniStringStartEnd start=+<<\s*'\z(.\{-}\)'+ end=+^\z1$+ contains=@dosiniInterpSQ
 syn region dosiniHereDoc matchgroup=dosiniStringStartEnd start=+<<\s*""+           end=+^$+    contains=@dosiniInterpDQ,dosiniNotEmptyLine
-syn region dosiniHereDoc matchgroup=dosiniStringStartEnd start=+<<\s*''+
+syn region dosiniHereDoc matchgroup=dosiniStringStartEnd start=+<<\s*''+           end=+^$+    contains=@dosiniInterpSQ,dosiniNotEmptyLine
 
 " Update Section Syntax for Folding
 syn region dosiniSection 
