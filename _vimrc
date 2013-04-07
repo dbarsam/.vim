@@ -289,9 +289,9 @@ nmap <leader>e8 <Plug>CoreViewVimInfo
 " ============
 " Serching Mappings
 " ============
-vmap <silent> * <Plug>VisualSearchForward
-vmap <silent> # <Plug>VisualSearchReverse
-vmap <silent> ? <Plug>VisualSearchGrep
+vmap <silent> *     <Plug>VisualSearchForward
+vmap <silent> #     <Plug>VisualSearchReverse
+vmap <silent> ?     <Plug>VisualSearchGrep
 
 " ============
 " Buffer Mappings
@@ -341,8 +341,8 @@ nmap <C-S-TAB>  <Plug>TabGoToPrev
 " ============
 " Indenting Mappings
 " ============
-vmap <TAB>      <Plug>TextMoveLineRight
-vmap <S-TAB>    <Plug>TextMoveLineLeft
+vmap <TAB>      <Plug>TextMoveRight
+vmap <S-TAB>    <Plug>TextMoveLeft
 
 " ============
 " Spelling Mappings
