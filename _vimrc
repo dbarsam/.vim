@@ -275,8 +275,9 @@ map <Up>   <Plug>OptionsWrapModeUp
 " Quick System Edits Mapped to Keyboard 
 " ============
 " e0     Edit User File Directory
-" e1-9   Edit or View system file
 nmap <leader>e0 <Plug>CoreEditVimFiles
+
+" e1-9   Edit or View system file
 nmap <leader>e1 <Plug>CoreEditVimrc
 nmap <leader>e2 <Plug>CoreEditGVimrc
 nmap <leader>e3 <Plug>CoreEditMenu
@@ -285,6 +286,9 @@ nmap <leader>e5 <Plug>CoreViewSystemRGB
 nmap <leader>e6 <Plug>CoreViewSystemMSWin
 nmap <leader>e7 <Plug>CoreViewSystemMenu
 nmap <leader>e8 <Plug>CoreViewVimInfo
+
+" Edit Old Files
+nmap <leader>eo <Plug>CoreBrowseRecentFiles
 
 " ============
 " Serching Mappings
