@@ -92,7 +92,7 @@ an 9999.90 &Help.&About                         :intro<CR>
 
 " The File.Recent Files submenu
 function! s:FileMenuRecentFiles() abort
-    if exists("v:oldfiles")
+    if exists("v:oldfiles") && !empty(v:oldfiles)
         silent! aunmenu File.&Recent\ Files\.\.\.
         " Exclude some directories from our list
         let exdirs = [
