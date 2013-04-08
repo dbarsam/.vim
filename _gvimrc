@@ -79,8 +79,8 @@ map! <S-Insert> <MiddleMouse>
 
 " Mousemodel is set to "popup" (above in the gui settings) but force the
 " Shift-Click behaviour of "extend" (in normal mode)
-nmap <S-LeftMouse>  <LeftMouse>*
-nmap <S-RightMouse> <LeftMouse>#
+nmap <S-LeftMouse>      <LeftMouse>g*
+nmap <S-RightMouse>     <LeftMouse>g#
 
 " ============
 " Fonts 
