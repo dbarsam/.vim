@@ -48,7 +48,7 @@ endfunction
 " Settings local to the machine, usually consisting of the following lines:
 "   let g:p4Presets = '<port> <client> <user>, <port> <client> <user>, etc"
 "   let g:p4DefaultPreset = 0
-let $VIMP4=expand($VIMFILES."/vimp4.txt")
+let $VIMP4=expand($VIMFILES."/.perforce/p4presets.txt")
 
 if filereadable($VIMP4)
     let s:p4PresetData = readfile($VIMP4)
@@ -65,6 +65,10 @@ else
     endif
 
     if !empty(g:p4Presets)
+        let s:p4dir = fnamemodify(expand($VIMP4), ':p:h')
+        if !isdirectory(s:p4dir)
+            call mkdir(s:p4dir)
+        endif
         call writefile([g:p4Presets, g:p4DefaultPreset], $VIMP4)
     endif
 endif

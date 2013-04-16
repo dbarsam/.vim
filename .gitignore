@@ -10,10 +10,10 @@ viminfo.txt
 
 # Vim Plugin Scratch Files & Directories
 .ctrlp/
-.yankring/
 .nerdtree/
 .netrwhist
-vimp4.txt
+.perforce/
+.yankring/
 
 # Vim Bundles are managed via Vundle plugin and not GitHub forks
 bundle/
