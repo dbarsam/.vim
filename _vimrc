@@ -290,6 +290,9 @@ nmap <leader>e8 <Plug>CoreViewVimInfo
 " Edit Old Files
 nmap <leader>eo <Plug>CoreBrowseRecentFiles
 
+" Edit Bundle List
+nmap <leader>eb <Plug>BundleEdit
+
 " ============
 " Serching Mappings
 " ============

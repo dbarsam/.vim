@@ -131,10 +131,17 @@ endfunction
 " ============
 " Bundle Commands
 " ============
+com! -bar -nargs=0 BundleEdit            confirm edit $VIMBUNDLE/bundle.vim
 com! -bar -nargs=+ BundleRegister        call <SID>BundleRegister(<f-args>)
 com! -bar -nargs=0 BundleManagerInit     call <SID>BundleManagerInit()
 com! -bar -nargs=0 BundleManagerInstall  call <SID>BundleManagerInstall()
 com! -bar -nargs=0 BundleManagerUpdate   call <SID>BundleManagerInit() | call <SID>BundleManagerInstall()
+
+" ============
+" Plugin Mapping
+" ============
+" Quick Edit and Reload Commands
+nnoremap <Plug>BundleEdit               :BundleEdit<CR>
 
 " ============
 " Restore Compatibility Options
