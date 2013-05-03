@@ -258,8 +258,8 @@ map <F9>  <Plug>SyntaxToggleColorPreset
 " Map classic vi movements to display ASCII value of Current Character
 nmap k <Plug>CoreGoToAsciiUp
 nmap j <Plug>CoreGoToAsciiDown
-nmap l <Plug>CoreGoToAsciiLeft
-nmap h <Plug>CoreGoToAsciiRight
+nmap l <Plug>CoreGoToAsciiRight
+nmap h <Plug>CoreGoToAsciiLeft
 
 " Include Half-Screen Jumping
 map <S-PageUp>   <Plug>CoreGoToHalfPageUp
