@@ -272,6 +272,11 @@ map <Down> <Plug>OptionsWrapModeDown
 map <Up>   <Plug>OptionsWrapModeUp
 
 " ============
+" System Mappings
+" ============
+map <leader>ex <Plug>SystemShowFileInExplorer
+
+" ============
 " Quick System Edits Mapped to Keyboard 
 " ============
 " e0     Edit User File Directory
