@@ -27,6 +27,8 @@ set cpo&vim
 " ============
 let g:DiffModeOverride = 
             \ {
+            \ '<M-Down>'  : '<Plug>DiffNext',
+            \ '<M-Up>'    : '<Plug>DiffPrev',
             \ '<TAB>'     : '<Plug>DiffNext',
             \ '<S-TAB>'   : '<Plug>DiffPrev',
             \ '<leader>g' : '<Plug>DiffGet',

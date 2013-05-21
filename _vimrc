@@ -301,9 +301,9 @@ nmap <leader>eb <Plug>BundleEdit
 " ============
 " Serching Mappings
 " ============
-vmap <silent> *     <Plug>VisualSearchForward
-vmap <silent> #     <Plug>VisualSearchReverse
-vmap <silent> ?     <Plug>VisualSearchGrep
+vmap <silent> * <Plug>VisualSearchForward
+vmap <silent> # <Plug>VisualSearchReverse
+vmap <silent> ? <Plug>VisualSearchGrep
 
 " ============
 " Buffer Mappings
@@ -335,12 +335,6 @@ nmap <leader>wr <Plug>WindowRotateLayout
 nmap <leader>wm <Plug>WindowMaximize
 nmap <leader>wM <Plug>WindowMinimize
 nmap <leader>w= <Plug>WindowResizeEqual
-
-" ============
-" Diff Mappings
-" ============
-nmap <M-Up>   <Plug>DiffNext
-nmap <M-Down> <Plug>DiffPrev
 
 " ============
 " Tab Mappings
