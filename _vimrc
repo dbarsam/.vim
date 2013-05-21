@@ -337,6 +337,16 @@ nmap <leader>wM <Plug>WindowMinimize
 nmap <leader>w= <Plug>WindowResizeEqual
 
 " ============
+" QuickFix Mappings
+" ============
+" Quick Fix Window Toggle
+nmap <leader>qf <Plug>QuickFixToggleQuickFixList 
+
+" Quick Fix Message Navigation
+nmap <M-Up>     <Plug>QuickFixGoToPrev
+nmap <M-Down>   <Plug>QuickFixGoToNext
+
+" ============
 " Tab Mappings
 " ============
 
