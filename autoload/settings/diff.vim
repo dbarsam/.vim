@@ -156,7 +156,7 @@ endfun
 " Visual Diff Argument Complete Function
 " ============
 function! settings#diff#VisualDiffArgs(ArgLead,CmdLine,CusrorPos) abort
-    return ["query", "clear", "compare", "queue"]
+    return filter(["query", "clear", "compare", "queue"], 'match(v:val, "^'.a:ArgLead.'") != -1')
 endfunction
 
 " ============
