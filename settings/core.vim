@@ -68,6 +68,8 @@ com! -bar -nargs=0 ReloadScripts            source $VIMFILES/scripts.vim
 
 com! -bar -nargs=? EditRecentFile           call settings#core#EditRecentFile(<f-args>)
 
+com! -bar -nargs=+ -complete=customlist,settings#core#EditSettingsArgs EditSettings call settings#core#EditSettings(<f-args>)
+
 " ============
 " Plugin Mapping
 " ============
