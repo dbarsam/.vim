@@ -86,7 +86,7 @@ function! settings#syntax#SetSyntaxModePrompt() abort
                 \ '6. Off (Local to File)']
     let choice = inputlist(l:list)
     if choice != 0
-        call settings#syntax#SetSyntaxMode(settings#syntax#SetSyntaxModeArgs(0,0,0)[l:choice])
+        call settings#syntax#SetSyntaxMode(settings#syntax#SetSyntaxModeArgs('',0,0)[l:choice])
     endif
 endfunction
 
@@ -94,7 +94,7 @@ endfunction
 " Visual Diff Argument Complete Function
 " ============
 function! settings#syntax#SetSyntaxModeArgs(ArgLead,CmdLine,CusrorPos) abort
-    return ["manual", "automatic", "on", "off", "clear", "on-file", "off-file"]
+    return filter(["manual", "automatic", "on", "off", "clear", "on-file", "off-file"], 'match(v:val, "^'.a:ArgLead.'") != -1')
 endfunction
 
 " ============
