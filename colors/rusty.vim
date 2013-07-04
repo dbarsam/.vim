@@ -18,7 +18,7 @@ hi ErrorMsg       term=standout        gui=NONE       guifg=White          guibg
 hi Folded         term=standout        gui=NONE       guifg=Cyan           guibg=DarkGrey
 hi FoldColumn     term=standout        gui=NONE       guifg=Cyan           guibg=DarkGrey
 hi SignColumn     term=standout        gui=NONE       guifg=Cyan           guibg=DarkGrey
-hi IncSearch      term=reverse         gui=NONE       guifg=Black          guibg=Yellow         
+hi IncSearch      term=underline       gui=underline  guifg=Yellow         guibg=Blue
 hi LineNr         term=underline       gui=NONE       guifg=DarkGoldenrod  guibg=#001000        
 hi MatchParen     term=reverse         gui=NONE                            guibg=DarkCyan
 hi ModeMsg        term=bold            gui=bold
