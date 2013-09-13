@@ -277,6 +277,12 @@ map <Up>   <Plug>OptionsWrapModeUp
 map <leader>ex <Plug>SystemShowFileInExplorer
 
 " ============
+" External Paste Manager Mappings
+" ============
+imap <S-C-V> <Plug>TextPutBefore
+nmap <S-C-V> <Plug>TextPutBefore
+
+" ============
 " Quick System Edits Mapped to Keyboard 
 " ============
 " e0     Edit User File Directory
