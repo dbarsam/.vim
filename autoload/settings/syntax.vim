@@ -91,7 +91,7 @@ function! settings#syntax#SetSyntaxModePrompt() abort
 endfunction
 
 " ============
-" Visual Diff Argument Complete Function
+" Sytax Mode Argument Complete Function
 " ============
 function! settings#syntax#SetSyntaxModeArgs(ArgLead,CmdLine,CusrorPos) abort
     return filter(["manual", "automatic", "on", "off", "clear", "on-file", "off-file"], 'match(v:val, "^'.a:ArgLead.'") != -1')
