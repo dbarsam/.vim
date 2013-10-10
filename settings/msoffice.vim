@@ -21,7 +21,7 @@ set cpo&vim
 " Plugin Commands
 " ============
 command! -bar -range=% -nargs=+ -complete=customlist,settings#msoffice#MSOutlookMeetingTrackingKeywords MSOutlookMeetingTrackingFilter  <line1>,<line2>call settings#msoffice#MSOutlookMeetingTrackingFilter(<f-args>)
-command! -bar -range=% -nargs=0 MSOutlookMeetingTrackingExtractNames                                                                    <line1>,<line2>call settings#msoffice#MSOutlookMeetingTrackingNames()
+command! -bar -range=% -nargs=0 MSOutlookMeetingTrackingExtractNames                                                                    <line1>,<line2>call settings#msoffice#MSOutlookMeetingTrackingExtractNames()
 command! -bar -range=% -nargs=0 MSOutlookMeetingTrackingTransposeNames                                                                  <line1>,<line2>call settings#msoffice#MSOutlookMeetingTrackingTransposeNames()
 command!               -nargs=0 MSOutlookMeetingTrackingCleanUp                                                                         MSOutlookMeetingTrackingFilter Accepted Tentative<BAR>MSOutlookMeetingTrackingExtractNames<BAR>MSOutlookMeetingTrackingTransposeNames
 
