@@ -38,7 +38,7 @@ endfunction
 function! settings#msoffice#MSOutlookTransposeName(name) abort
     let names = split(a:name, " ")
     if (len(l:names) <= 1)
-        echo "MSOutlookMeetingTrackingFilter:  Malformed name [" . a:name . "]"
+        echo "MSOutlookTransposeName:  Malformed name [" . a:name . "]"
         return ""
     endif
     return join(names[1:], " ").", ".names[0]
