@@ -30,6 +30,7 @@ BundleRegister TComment         'https://github.com/tomtom/tcomment_vim.git'
 BundleRegister Tabular          'https://github.com/godlygeek/tabular.git'
 BundleRegister TagBar           'https://github.com/majutsushi/tagbar.git'
 BundleRegister VimTweak         'https://github.com/dbarsam/vim-vimtweak.git' 
+BundleRegister VimMisc          'https://github.com/xolox/vim-misc.git'
 
 " ============
 " GitHub Vim-Script Mirror Repositories 
