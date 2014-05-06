@@ -42,6 +42,9 @@ let s:BundleList = {}
 " The Auxilliary Bundle List file
 let s:BundleFile = expand('$VIMBUNDLE/bundle.vim')
 
+" The Update on Startup flag
+let s:BundleStartupUpdate = 0
+
 " ============
 " Bundle Functions
 " ============
@@ -52,7 +55,7 @@ function! s:BundleRegister(name, path)
 endfunction
 
 " Bundle Init - Setting up Vundle automatically
-" From https://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" From http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
 function! s:BundleManagerInit()
 
     let g:vundle_default_git_proto = "ssh"
@@ -90,7 +93,9 @@ function! s:BundleManagerInit()
         endif
         " re-check if Vundle exixts
         let installed = filereadable( expand('$VIMBUNDLE/vundle/README.md') )
+        let s:BundleStartupUpdate = installed
     endif
+
 
     " init Vundle
     if installed
@@ -115,6 +120,16 @@ function! s:BundleManagerInit()
     if (l:ftstate[1] == "ON") | filetype on | endif
     if (l:ftstate[2] == "ON") | filetype plugin on | endif
     if (l:ftstate[3] == "ON") | filetype indent on | endif
+endfunction
+
+function! s:BundleManagerStartupUpdate()
+    if s:BundleStartupUpdate 
+        if confirm("Update all bundles defined '".s:BundleFile."'?", "&Yes\n&No") == 1
+            BundleManagerUpdate
+        else
+            echomsg "Execute command 'BundleManagerUpdate' to update and install bundles."
+        endif
+    endif    
 endfunction
 
 " Bundle Install - Kick off the install process for bundles
@@ -142,6 +157,14 @@ com! -bar -nargs=0 BundleManagerUpdate   call <SID>BundleManagerInit() | call <S
 " ============
 " Quick Edit and Reload Commands
 nnoremap <Plug>BundleEdit               :BundleEdit<CR>
+
+" ============
+" Vim Startup Bundle Update
+" ============
+augroup BundleManager
+    au!
+    au VimEnter * call s:BundleManagerStartupUpdate()
+augroup END
 
 " ============
 " Restore Compatibility Options
