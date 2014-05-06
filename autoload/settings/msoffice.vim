@@ -19,7 +19,7 @@ endfunction
 " Execute the filter with the contents of the 'O' register
 " ============
 function! settings#msoffice#MSOutlookRowFilterApply() range
-    execute a:firstline . "," . a:lastline . "call settings#msoffice#MSOutlookRowFilter(" . string(map(split(strtrans(@o), '\^@'), '"^[^A-Z]\\+\\c" . v:val')) . ")"
+    execute a:firstline . "," . a:lastline . "call settings#msoffice#MSOutlookRowFilter(" . string(map(split(strtrans(@o), '\^@'), '"[\\s]\\{-}\\c" . v:val')) . ")"
 endfunction
 
 " ============
