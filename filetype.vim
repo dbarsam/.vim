@@ -14,6 +14,7 @@ endif
 " Vim support file to detect file types
 augroup filetypedetect
     au! BufRead,BufNewFile *.as         setfiletype actionscript    
+    au! BufRead,BufNewFile *.csv        setfiletype csv
     au! BufRead,BufNewFile *.mxml       setfiletype mxml
     au! BufRead,BufNewFile *.mold       setfiletype cs
     au! BufRead,BufNewFile *.build      setfiletype xml

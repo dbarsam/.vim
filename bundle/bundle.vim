@@ -12,6 +12,7 @@
 " ============
 BundleRegister Actionscript     'https://github.com/endel/actionscript.vim'
 BundleRegister BufKill          'https://github.com/dbarsam/vim-bufkill.git' 
+BundleRegister CSV              'https://github.com/chrisbra/csv.vim.git'
 BundleRegister CtrlP            'https://github.com/kien/ctrlp.vim.git'
 BundleRegister EasyMotion       'https://github.com/Lokaltog/vim-easymotion.git'
 BundleRegister JellyBeans       'https://github.com/nanotech/jellybeans.vim.git'
