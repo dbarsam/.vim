@@ -39,7 +39,7 @@ set   guioptions+=e              " show tab pages
 set   guifont=
 set   guifont+=Terminal:h6
 set   guifontwide=
-set   guifontwide+=MS_Gothic:h6
+set   guifontwide+=NSimSun:h6
 
 " Gui Cursor
 set   guicursor=
