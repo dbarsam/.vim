@@ -32,6 +32,7 @@ BundleRegister Tabular          'https://github.com/godlygeek/tabular.git'
 BundleRegister TagBar           'https://github.com/majutsushi/tagbar.git'
 BundleRegister VimTweak         'https://github.com/dbarsam/vim-vimtweak.git' 
 BundleRegister VimMisc          'https://github.com/xolox/vim-misc.git'
+BundleRegister VimJinja2        'https://github.com/Glench/Vim-Jinja2-Syntax.git'
 
 " ============
 " GitHub Vim-Script Mirror Repositories 
