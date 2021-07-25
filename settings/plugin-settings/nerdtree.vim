@@ -34,7 +34,7 @@ endif
 " ============
 " Plugin Mapping
 " ============
-nnoremap <silent> <leader>nt :NERDTree<CR>
+nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 
 " ============
 " Restore Compatibility Options
