@@ -104,7 +104,7 @@ function! s:BundleManagerInit()
 
         " process the other bundles and load their settings
         for [name, bundle] in items(s:BundleList)
-            exe 'runtime! settings/plugin-settings/*'.name.'*'
+            exe 'runtime! settings/plugin-settings/*'.tolower(name).'*'
             Bundle bundle
         endfor 
         
