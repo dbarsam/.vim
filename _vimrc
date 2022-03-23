@@ -405,7 +405,11 @@ filetype plugin indent on
 " ===================================================================
 
 if exists(":SyntaxInit")
-    if has("gui_running") || $EMULATOR == "console2"
+    if !empty($SSH_CONNECTION)
+        if &term == "xterm-256color"
+            SyntaxInit termschool
+        endif
+    elseif has("gui_running") || $EMULATOR == "console2"
         SyntaxInit rusty
     endif
 endif
