@@ -18,8 +18,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " Replace 'g' with our mapleader
-let g:tcommentMapLeaderOp1 = g:mapleader . "c"
-let g:tcommentMapLeaderOp2 = g:mapleader . "C"
+let g:tcomment_opleader1 = g:mapleader . "c"
 
 " ============
 " Restore Compatibility Options
